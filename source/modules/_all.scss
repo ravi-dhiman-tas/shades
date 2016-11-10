@@ -1,0 +1,28 @@
+// 1. colors
+
+$color-base:         #313131 !default;
+$color-grey:         #bbb !default;
+$color-grey-dark:    #111 !default;
+$color-grey-light:   #e3e3e3 !default;
+$color-grey-lighter: #f7f7f7 !default;
+
+$color-brand-default:  #234fde !default;
+$color-brand-green:    #23efaa !default;
+$color-brand-red:      #ff1111 !default;
+$color-brand-blue:     #1111ff !default;
+$color-brand-orange:   #fff111 !default;
+$color-brand-dark:       $color-base !default;
+
+// 2. spacing
+
+$spacing: 10px !default;
+$spacing-x: $spacing !default;
+$spacing-y: $spacing !default;
+
+// 3. body
+
+$body-bg: #fff !default;
+$body-color: $color-base !default;
+$inverse-bg: $color-base !default;
+$inverse-color: $color-grey-lighter !default;
+
