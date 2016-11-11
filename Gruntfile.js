@@ -2,6 +2,12 @@ module.exports = function(grunt) {
     'use-strict';
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+        clean: {
+            clean_sass: {
+                src: ['dist/css/*'],
+                filter: 'isFile',
+            },
+        },
         sass: {
             dist: {
                 options: {
@@ -11,6 +17,16 @@ module.exports = function(grunt) {
                 },
                 files: {
                     'dist/css/shades.css': 'source/shades.scss'
+                }
+            },
+            dist_compressed: {
+                options: {
+                    style: 'compressed', /* compressed, compact, nested */
+                    sourcemap: 'none',
+                    precision: 7
+                },
+                files: {
+                    'dist/css/shades.min.css': 'source/shades.scss'
                 }
             }
         },
@@ -30,7 +46,13 @@ module.exports = function(grunt) {
             },
         },
 	});
+
 	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+
+    grunt.registerTask('remove',['clean:clean_sass']);
+    grunt.registerTask('build',['sass:dist']);
+    grunt.registerTask('production',['sass:dist_compressed']);
 	grunt.registerTask('default',['watch']);
 }
