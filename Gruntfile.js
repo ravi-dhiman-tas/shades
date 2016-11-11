@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
     'use-strict';
+
+    require("load-grunt-tasks")(grunt);
     grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
         clean: {
@@ -16,7 +18,7 @@ module.exports = function(grunt) {
                     precision: 7
                 },
                 files: {
-                    'dist/css/shades.css': 'source/shades.scss'
+                    'dist/css/shades.css': 'scss/shades.scss'
                 }
             },
             dist_compressed: {
@@ -26,7 +28,18 @@ module.exports = function(grunt) {
                     precision: 7
                 },
                 files: {
-                    'dist/css/shades.min.css': 'source/shades.scss'
+                    'dist/css/shades.min.css': 'scss/shades.scss'
+                }
+            }
+        },
+        babel: {
+           options: {
+               sourceMap: true,
+               presets: ['es2015']
+           },
+           dist: {
+                files: {
+                   'dist/js/app.js': 'js/app.js'
                 }
             }
         },
@@ -52,7 +65,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('remove',['clean:clean_sass']);
-    grunt.registerTask('build',['sass:dist']);
+    grunt.registerTask('babel_build',['babel']);
+    grunt.registerTask('build', ['sass:dist', 'babel']);
     grunt.registerTask('production',['sass:dist_compressed']);
 	grunt.registerTask('default',['watch']);
 }
