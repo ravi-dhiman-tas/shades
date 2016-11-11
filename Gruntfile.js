@@ -5,21 +5,29 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'expanded', /* compressed, compact, nested */
+                    sourcemap: 'none',
+                    precision: 7
                 },
                 files: {
-                    'dist/css/shades.min.css': 'source/shades.scss'
+                    'dist/css/shades.css': 'source/shades.scss'
                 }
             }
         },
         watch: {
-            css: {
-                files: ['source/*.scss'],
+            options: {
+                dateFormat: function(time) {
+                    grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
+                    grunt.log.writeln('Waiting for more changes...');
+                },
+            },
+            watch_sass: {
+                files: ['**/*.scss'],
                 tasks: ['sass'],
                 options: {
-                    spawn: false
-                }
-            }
+                    spawn: false,
+                },
+            },
         },
 	});
 	grunt.loadNpmTasks('grunt-contrib-sass');
