@@ -96,7 +96,7 @@ $gray-dark:                 #373a3c !default;
 $gray:                      #525252 !default;
 $gray-light:                #f6f6f6 !default;
 $gray-lighter:              #eceeef !default;
-$gray-lightest:             #f7f7f9 !default;
+$gray-lightest:             #f7f7f7 !default;
 
 $brand-primary:             #2b69a7 !default;
 $brand-green:               #4caf50 !default;
@@ -209,6 +209,13 @@ $container-max-widths: (
   xl: 1140px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+$wrap-max-widths: (
+  md: 650px,
+  lg: 820px
+) !default;
+@include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
 
 // 8. Grid columns
@@ -694,14 +701,16 @@ $state-danger-border:            darken($state-danger-bg, 5%) !default;
 
 
 // 21. Cards
+$card-spacer:              15px !default;
 $card-spacer-x:            1.25rem !default;
 $card-spacer-y:            .75rem !default;
 $card-border-width:        1px !default;
 $card-border-radius:       $border-radius !default;
-$card-border-color:        rgba(0,0,0,.125) !default;
+$card-border-color:        rgba(0,0,0,.09) !default;
 $card-border-radius-inner: calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:              #f5f5f5 !default;
 $card-bg:                  #fff !default;
+$card-box-shadow:          0 1px 4px rgba(0,0,0,.04) !default;
 
 $card-link-hover-color:    #fff !default;
 
@@ -710,6 +719,9 @@ $card-img-overlay-padding: 1.25rem !default;
 $card-deck-margin:         .625rem !default;
 
 $card-columns-sm-up-column-gap: 1.25rem !default;
+
+$card-wrap-width-md:        915px !default;
+$card-wrap-width-sm:        650px !default;
 
 
 // 22. Tooltips
