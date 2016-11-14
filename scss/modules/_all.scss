@@ -85,7 +85,7 @@
 // Variable format should follow the `$component-modifier-state-property` order.
 
 // class prefix
-$cls-pre: 's';
+$cls-pre: 'ti';
 
 
 // 1. Colors
@@ -93,12 +93,15 @@ $cls-pre: 's';
 // Grayscale and brand colors for use across Bootstrap.
 
 $gray-dark:                 #373a3c !default;
-$gray:                      #55595c !default;
-$gray-light:                #818a91 !default;
+$gray:                      #525252 !default;
+$gray-light:                #f6f6f6 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f9 !default;
 
-$brand-primary:             #0275d8 !default;
+$brand-primary:             #2b69a7 !default;
+$brand-green:               #4caf50 !default;
+$brand-red:                 #db4e3f !default;
+$brand-disabled:            #777777 !default;
 $brand-success:             #5cb85c !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
@@ -301,9 +304,9 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          .25rem !default;
-$border-radius-lg:       .3rem !default;
-$border-radius-sm:       .2rem !default;
+$border-radius:          2px !default;
+$border-radius-lg:       2px !default;
+$border-radius-sm:       2px !default;
 
 $component-active-color: #fff !default;
 $component-active-bg:    $brand-primary !default;
@@ -337,12 +340,19 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  1rem !default;
-$btn-padding-y:                  .5rem !default;
-$btn-line-height:                1.25 !default;
+$btn-padding-x:                  3rem !default;
+$btn-padding-y:                  .6rem !default;
+$btn-line-height:                1.35 !default;
 $btn-font-weight:                $font-weight-normal !default;
-$btn-box-shadow:                 inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075) !default;
-$btn-active-box-shadow:          inset 0 3px 5px rgba(0,0,0,.125) !default;
+$btn-font-transform:             uppercase !default;
+$btn-font-spacing:               1px !default;
+$btn-box-shadow:                 0 1px 0 rgba(0, 0, 0, 0), 0 1px 3px rgba(0, 0, 0, 0.12) !default;
+$btn-active-box-shadow:          0 2px 5px rgba(0, 0, 0, 0.14) !default;
+$btn-active-outline:             none !default;
+
+$btn-default-color:              #888888 !default;
+$btn-default-bg:                 $gray-light !default;
+$btn-default-border:             $btn-default-bg !default;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
