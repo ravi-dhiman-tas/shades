@@ -1,16 +1,8 @@
-html {
-	font-size: $font-size-root;
-}
-
-body {
-	font-size: $font-size-base;
-	background: $gray-lighter
-}
-
 .#{$cls-pre}-btn {
 	display: inline-block;
 	padding: $btn-padding-y $btn-padding-x;
 	line-height: $btn-line-height;
+	font-size: $font-size-base;
 	font-weight: $btn-font-weight;
 	text-transform: $btn-font-transform;
 	letter-spacing: $btn-font-spacing;
@@ -42,6 +34,21 @@ body {
 		pointer-events: none;
 		@include btn-disabled($btn-default-color, $btn-default-bg, $btn-default-border);
 	}
+
+	&.#{$cls-pre}-btn-lg {
+		padding: $btn-padding-y-lg $btn-padding-x-lg;
+		font-size: $font-size-lg;
+	}
+
+	&.#{$cls-pre}-btn-sm {
+		padding: $btn-padding-y-sm $btn-padding-x-sm;
+		font-size: $font-size-sm;
+	}
+
+	&.#{$cls-pre}-btn-xs {
+		padding: $btn-padding-y-sm $btn-padding-x-sm;
+		font-size: $font-size-xs;
+	}
 }
 
 .#{$cls-pre}-btn-default {
@@ -52,6 +59,14 @@ body {
 	&:hover {
 		@include btn-default-hover($btn-default-color, $btn-default-bg, $btn-default-border);
 	}
+
+	&:focus {
+		color: $btn-default-color;
+	}
+
+	&:active {
+		@include btn-focus($btn-default-color, $btn-default-bg, $btn-default-border);
+	}
 }
 
 .#{$cls-pre}-btn-primary {
@@ -61,6 +76,68 @@ body {
 
 	&:hover {
 		@include btn-hover($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	}
+
+	&:focus {
+		color: $btn-primary-color;
+	}
+
+	&:active {
+		@include btn-focus($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+	}
+}
+
+.#{$cls-pre}-btn-red {
+	color: $btn-red-color;
+	background: $btn-red-bg;
+	border-color: $btn-red-border;
+
+	&:hover {
+		@include btn-hover($btn-red-color, $btn-red-bg, $btn-red-border);
+	}
+
+	&:focus {
+		color: $btn-red-color;
+	}
+
+	&:active {
+		@include btn-focus($btn-red-color, $btn-red-bg, $btn-red-border);
+	}
+}
+
+.#{$cls-pre}-btn-green {
+	color: $btn-green-color;
+	background: $btn-green-bg;
+	border-color: $btn-green-border;
+
+	&:hover {
+		@include btn-hover($btn-green-color, $btn-green-bg, $btn-green-border);
+	}
+
+	&:focus {
+		color: $btn-green-color;
+	}
+
+	&:active {
+		@include btn-focus($btn-green-color, $btn-green-bg, $btn-green-border);
+	}
+}
+
+.#{$cls-pre}-btn-orange {
+	color: $btn-orange-color;
+	background: $btn-orange-bg;
+	border-color: $btn-orange-border;
+
+	&:hover {
+		@include btn-hover($btn-orange-color, $btn-orange-bg, $btn-orange-border);
+	}
+
+	&:focus {
+		color: $btn-orange-color;
+	}
+
+	&:active {
+		@include btn-focus($btn-orange-color, $btn-orange-bg, $btn-orange-border);
 	}
 }
 

@@ -1,5 +1,5 @@
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 body {
@@ -9,8 +9,9 @@ body {
 
 .ti-btn {
   display: inline-block;
-  padding: 0.6rem 3rem;
+  padding: 0.5rem 3rem;
   line-height: 1.35;
+  font-size: 1rem;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -50,6 +51,18 @@ body {
   border-color: #e4e4e4;
   box-shadow: 0 0 1px transparent;
 }
+.ti-btn.ti-btn-lg {
+  padding: 0.75rem 3rem;
+  font-size: 1.25rem;
+}
+.ti-btn.ti-btn-sm {
+  padding: 0.25rem 1.5rem;
+  font-size: 0.875rem;
+}
+.ti-btn.ti-btn-xs {
+  padding: 0.25rem 1.5rem;
+  font-size: 0.75rem;
+}
 
 .ti-btn-default {
   color: #888888;
@@ -61,6 +74,14 @@ body {
   background: #eeeeee;
   border-color: #eeeeee;
 }
+.ti-btn-default:focus {
+  color: #888888;
+}
+.ti-btn-default:active {
+  color: #888888;
+  background: #d0d0d0;
+  border-color: #d0d0d0;
+}
 
 .ti-btn-primary {
   color: #fff;
@@ -68,11 +89,78 @@ body {
   border-color: #2b69a7;
 }
 .ti-btn-primary:hover {
-  color: #fff, 0%;
+  color: #fff;
   background: #265c93;
   border-color: #265c93;
+}
+.ti-btn-primary:focus {
+  color: #fff;
+}
+.ti-btn-primary:active {
+  color: #fff;
+  background: #1b436a;
+  border-color: #1b436a;
+}
+
+.ti-btn-red {
+  color: #fff;
+  background: #db4e3f;
+  border-color: #db4e3f;
+}
+.ti-btn-red:hover {
+  color: #fff;
+  background: #d73a2a;
+  border-color: #d73a2a;
+}
+.ti-btn-red:focus {
+  color: #fff;
+}
+.ti-btn-red:active {
+  color: #fff;
+  background: #ad2e20;
+  border-color: #ad2e20;
+}
+
+.ti-btn-green {
+  color: #fff;
+  background: #4caf50;
+  border-color: #4caf50;
+}
+.ti-btn-green:hover {
+  color: #fff;
+  background: #449d48;
+  border-color: #449d48;
+}
+.ti-btn-green:focus {
+  color: #fff;
+}
+.ti-btn-green:active {
+  color: #fff;
+  background: #357a38;
+  border-color: #357a38;
+}
+
+.ti-btn-orange {
+  color: #fff;
+  background: #eab911;
+  border-color: #eab911;
+}
+.ti-btn-orange:hover {
+  color: #fff;
+  background: #d2a60f;
+  border-color: #d2a60f;
+}
+.ti-btn-orange:focus {
+  color: #fff;
+}
+.ti-btn-orange:active {
+  color: #fff;
+  background: #a3810c;
+  border-color: #a3810c;
 }
 
 .ti-btn-block {
   width: 100%;
 }
+
+/*# sourceMappingURL=shades.css.map */
