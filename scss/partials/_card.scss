@@ -1,5 +1,155 @@
-.#{$cls-pre}-cards {
-    background: #ddd;
-    border: 1px solid #ddd;
-    padding-left: 10px;
+.#{$cls-pre}-card {
+	position: relative;
+	padding: $card-spacer;
+
+	@include media-breakpoint-up(sm) {
+		background: $card-bg;
+		border-radius: $border-radius * 2;
+		box-shadow: $card-box-shadow;
+		border: $card-border-width solid $card-border-color;
+	}
+}
+
+.#{$cls-pre}-card-wrap {
+	margin-left: auto;
+	margin-right: auto;
+	@include clearfix();
+	@include make-wrap-max-widths();
+}
+
+.#{$cls-pre}-card-container {
+	position: relative;
+	padding-top: $card-spacer/2.5;
+	padding-bottom: $card-spacer/2.5;
+
+	.#{$cls-pre}-card {
+		@include media-breakpoint-down(sm) {
+			border-bottom: $card-border-width solid $card-border-color;
+		}
+	}
+
+	&:last-child {
+		.#{$cls-pre}-card {
+			@include media-breakpoint-down(sm) {
+				border-bottom-width: 0;
+			}
+		}
+	}
+}
+
+.#{$cls-pre}-card-group {
+	position: relative;
+	padding-top: $card-spacer/2.5;
+	padding-bottom: $card-spacer/2.5;
+
+	@include media-breakpoint-up(sm) {
+		display: table;
+	}
+
+	.#{$cls-pre}-card {
+		&:not(:first-child):not(:last-child) {
+			border-radius: 0;
+		}
+
+		@include media-breakpoint-up(sm) {
+			display: table-cell;
+			width: 1%;
+			vertical-align: top;
+
+			&:first-child {
+				border-top-right-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&:last-child {
+				border-top-left-radius: 0;
+				border-bottom-left-radius: 0;
+			}
+
+			+ .#{$cls-pre}-card {
+				border-left: 0;
+				margin-left: 0;
+			}
+		}
+
+		@include media-breakpoint-down(sm) {
+			&:first-child {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+
+			&:last-child {
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+
+			+ .#{$cls-pre}-card {
+				border-top: 0;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.#{$cls-pre}-card-heading {
+	margin-top: 0;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	> a {
+		color: $body-color;
+	}
+}
+
+.#{$cls-pre}-card-thumbnail {
+	background: $gray-light;
+	display: block;
+	margin-bottom: $card-spacer;
+	overflow: hidden;
+	position: relative;
+	min-height: 100px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	> img {
+		width: 100%;
+	}
+
+	&.lg {
+		min-height: 200px;
+	}
+
+	&.vid {
+		.icn {
+			z-index: 200;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background: $brand-primary;
+			text-transform: uppercase;
+			color: #fff;
+			padding: 1rem 4rem;
+			opacity: .5;
+			line-height: 1;
+			vertical-align: middle;
+			font-size: 4.6rem;
+			border-radius: $card-border-radius*6;
+			cursor: pointer;
+			@include translate(-50%, -50%);
+			@include tranisition(all 0.3s ease);
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		margin-left: -$card-spacer;
+		margin-right: -$card-spacer;
+	}
 }

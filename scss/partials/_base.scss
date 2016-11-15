@@ -1,0 +1,13 @@
+html {
+	font-size: $font-size-root;
+}
+
+body {
+	font-size: $font-size-base;
+	margin: 0;
+	padding: 0;
+
+	@include media-breakpoint-up(sm) {
+		background: $gray-lightest;
+	}
+}
