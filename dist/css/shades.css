@@ -329,6 +329,27 @@ body {
   }
 }
 
+/*---
+title: Navbar
+resume: The navbar page
+section: Navbar
+---
+
+``shades`` includes predefined **navbar** styles.
+
+```html
+<nav class="navbar"></nav>
+```
+
+*/
+/*---
+title: Navbar Main
+---
+
+```html
+<nav class="navbar navbar-main"></nav>
+```
+*/
 .ti-navbar {
   display: block;
   border-radius: 2px;

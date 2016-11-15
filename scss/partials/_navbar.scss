@@ -1,3 +1,26 @@
+/*---
+title: Navbar
+resume: The navbar page
+section: Navbar
+---
+
+``shades`` includes predefined **navbar** styles.
+
+```html
+<nav class="navbar"></nav>
+```
+
+*/
+
+/*---
+title: Navbar Main
+---
+
+```html
+<nav class="navbar navbar-main"></nav>
+```
+*/
+
 .#{$cls-pre}-navbar {
 	display: block;
 	border-radius: $navbar-border-radius;
