@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "grunt": "grunt"
+    "start": "grunt"
   },
   "author": "Ravi Dhiman",
   "license": "MIT",

@@ -13,6 +13,8 @@
 .#{$cls-pre}-card-wrap {
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: $spacer;
+	padding-right: $spacer;
 	@include clearfix();
 	@include make-wrap-max-widths();
 }

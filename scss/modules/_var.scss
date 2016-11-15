@@ -130,7 +130,7 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1rem !default;
+$spacer:   15px !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 $spacers: (
@@ -595,6 +595,7 @@ $zindex-tooltip:           1070 !default;
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-x:                  $spacer !default;
 $navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-shadow:                     0 2px 3px rgba(0,0,0,0.12) !default;
 
 $navbar-brand-padding-y:            .25rem !default;
 

@@ -1,0 +1,20 @@
+.#{$cls-pre}-navbar {
+	display: block;
+	border-radius: $navbar-border-radius;
+	padding: $navbar-padding-y $navbar-padding-x;
+	position: relative;
+	@include clearfix();
+
+	.#{$cls-pre}-brand-logo {
+		position: relative;
+		@include media-breakpoint-up(sm) {
+			display: table-cell;
+		}
+	}
+
+}
+
+.#{$cls-pre}-navbar-main {
+	background: #fff;
+	box-shadow: $navbar-shadow;
+}

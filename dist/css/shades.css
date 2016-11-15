@@ -185,6 +185,8 @@ body {
 .ti-card-wrap {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .ti-card-wrap::after {
   content: "";
@@ -325,6 +327,31 @@ body {
     margin-left: -15px;
     margin-right: -15px;
   }
+}
+
+.ti-navbar {
+  display: block;
+  border-radius: 2px;
+  padding: 7.5px 15px;
+  position: relative;
+}
+.ti-navbar::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ti-navbar .ti-brand-logo {
+  position: relative;
+}
+@media (min-width: 576px) {
+  .ti-navbar .ti-brand-logo {
+    display: table-cell;
+  }
+}
+
+.ti-navbar-main {
+  background: #fff;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
 }
 
 /*# sourceMappingURL=shades.css.map */
