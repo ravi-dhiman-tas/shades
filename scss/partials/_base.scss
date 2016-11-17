@@ -6,8 +6,33 @@ body {
 	font-size: $font-size-base;
 	margin: 0;
 	padding: 0;
+	padding-top: $body-top-padding;
 
 	@include media-breakpoint-up(sm) {
 		background: $gray-lightest;
+	}
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+* {
+	@include borderbox();
+
+	&::before, &::after {
+		@include borderbox();
+	}
+}
+
+a {
+	color: $brand-primary;
+	text-decoration: $link-decoration;
+
+	&:hover, &:hover {
+		outline: none !important;
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration !important;
 	}
 }

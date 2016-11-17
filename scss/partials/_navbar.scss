@@ -21,18 +21,121 @@ title: Navbar Main
 ```
 */
 
+.container {
+	position: relative;
+}
+
 .#{$cls-pre}-navbar {
 	display: block;
+	width: 100%;
 	border-radius: $navbar-border-radius;
 	padding: $navbar-padding-y $navbar-padding-x;
 	position: relative;
 	@include clearfix();
 
-	.#{$cls-pre}-brand-logo {
+	.#{$cls-pre}-nav-logo {
 		position: relative;
-		@include media-breakpoint-up(sm) {
-			display: table-cell;
+		@include media-breakpoint-up(md) {
+			position: absolute;
 		}
+	}
+
+	.#{$cls-pre}-nav-form {
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: $spacer;
+		padding-right: $spacer;
+		@include make-wrap-max-widths();
+
+		> form {
+			display: block;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.#{$cls-pre}-nav-navigation {
+		position: relative;
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			right: 0;
+			top: 0;
+			padding-top: 2px;
+		}
+
+		@include clearfix();
+
+		.#{$cls-pre}-nav-links {
+			float: right;
+			position: relative;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			padding-left: 9px;
+			padding-right: 10px;
+			color: $gray-text;
+			vertical-align: middle;
+
+			.#{$cls-pre}-icon, .#{$cls-pre}-hexagon {
+				display: inline-block;
+			}
+
+			.#{$cls-pre}-icon {
+				margin-right: 5px;
+			}
+
+			&.active {
+				color: $brand-primary;
+
+				.#{$cls-pre}-hexagon {
+					@include hexagon-active($brand-primary);
+				}
+			}
+
+			&.profile {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.#{$cls-pre}-profile-widget {
+
+				> .#{$cls-pre}-profile-icon {
+					padding-top: 0;
+					padding-bottom: 0;
+					border-radius: 50%;
+					background: $gray-text;
+					width: 30px;
+					height: 30px;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.#{$cls-pre}-hexagon {
+			@include hexagon($gray-text, $brand-primary, 20px);
+		}
+	}
+
+	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-absolute-top {
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&.#{$cls-pre}-fixed-bottom, &.#{$cls-pre}-absolute-bottom {
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-fixed-bottom {
+		position: fixed;
+		z-index: $zindex-navbar-fixed;
+	}
+
+	&.#{$cls-pre}-absolute-top, &.#{$cls-pre}-absolute-bottom {
+		position: absolute;
+		z-index: $zindex-navbar;
 	}
 
 }

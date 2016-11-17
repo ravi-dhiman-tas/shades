@@ -2,51 +2,141 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1, min-scale=1">
-		<title>Shades v1</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Navbar</title>
+		<link rel="icon" href="image/favicon.ico">
+		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
+		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen" title="no title">
 		<link rel="stylesheet" href="css/shades.css" media="screen" title="no title">
 	</head>
 	<body>
 
-		<header class="ti-navbar ti-navbar-main">
-			<p>Some Content</p>
+		<header class="ti-navbar ti-navbar-main ti-fixed-top" role="nav">
+			<div class="container">
+				<div class="ti-nav-logo">
+					<a href="/"><img src="image/logo_120_33.png" alt="Trusted Insight Logo" width="120" /></a>
+				</div>
+				<div class="ti-nav-form">
+					<form>
+						<div class="ti-input-group search-icon">
+							<span class="ti-input-group-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</span>
+							<input type="text" class="ti-form-control" placeholder="Search...">
+							<span class="ti-input-group-btn">
+								<button class="ti-btn sbtn ti-btn-primary" type="button">Search</button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="ti-nav-navigation" role="navigation">
+					<div class="ti-nav-links profile">
+						<div class="ti-profile-widget">
+							<div class="ti-profile-icon"></div>
+						</div>
+					</div>
+
+					<div class="ti-nav-links active">
+						<div class="ti-icon">
+							<i class="fa fa-bell" aria-hidden="true"></i>
+						</div>
+						<div class="ti-hexagon">8</div>
+					</div>
+
+					<div class="ti-nav-links">
+						<div class="ti-icon">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</div>
+						<div class="ti-hexagon">0</div>
+					</div>
+				</div>
+			</div>
 		</header>
 
-		<div class="ti-card-wrap">
-			<div class="ti-card-group">
-				<div class="ti-card">
-					<h1 class="ti-card-heading">Card</h1>
-					<div class="ti-card-thumbnail lg">
-						<img src="" alt="" />
-					</div>
-				</div>
-				<div class="ti-card">
-					<h1>Card</h1>
-				</div>
-				<div class="ti-card">
-					<h1>Card</h1>
-				</div>
+		<div class="container">
+
+			<div class="ti-sidebar-left ti-absolute-top">
+				<ul class="ti-nav-menu">
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-user" aria-hidden="true"></i> People</a>
+					</li>
+					<li class="ti-nav-item active menu">
+						<a href="#" data-toggler="menu">
+							<i class="fa fa-briefcase" aria-hidden="true"></i> Jobs
+
+							<span class="icn fa fa-angle-down" aria-hidden="true"></span>
+						</a>
+						<ul class="ti-nav-menu">
+							<li class="ti-nav-item active">
+								<a href="#">All Jobs</a>
+							</li>
+							<li class="ti-nav-item">
+								<a href="#">Saved Jobs</a>
+							</li>
+						</ul>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-rss" aria-hidden="true"></i> News</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-building-o" aria-hidden="true"></i> Firms</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-bar-chart" aria-hidden="true"></i> Ranking</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-money" aria-hidden="true"></i> Search & Hires</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-shield" aria-hidden="true"></i> Syndicates</a>
+					</li>
+				</ul>
 			</div>
 
-			<div class="ti-card-container">
-				<div class="ti-card">
-					<h1 class="ti-card-heading">Card</h1>
-					<div class="ti-card-thumbnail lg">
-						<img src="" alt="" />
+			<div class="ti-card-wrap">
+				<div class="ti-card-group">
+					<div class="ti-card">
+						<h1 class="ti-card-heading">Card</h1>
+						<div class="ti-card-thumbnail lg">
+						</div>
+					</div>
+					<div class="ti-card">
+						<h1>Card</h1>
+					</div>
+					<div class="ti-card">
+						<h1>Card</h1>
 					</div>
 				</div>
-			</div>
 
-			<div class="ti-card-container">
-				<div class="ti-card">
-					<h1 class="ti-card-heading">Card</h1>
-					<div class="ti-card-thumbnail lg vid">
-						<div class="icn">&times;</div>
-						<img src="" alt="" />
+				<div class="ti-card-container">
+					<div class="ti-card">
+						<h1 class="ti-card-heading">Card</h1>
+						<div class="ti-card-thumbnail lg">
+							<img src="" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="ti-card-container">
+					<div class="ti-card">
+						<h1 class="ti-card-heading">Card</h1>
+						<div class="ti-card-thumbnail lg vid">
+							<div class="icn">&times;</div>
+							<img src="" alt="" />
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script src="js/app.js"></script>
 
 	</body>
 </html>

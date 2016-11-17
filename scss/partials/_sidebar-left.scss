@@ -1,0 +1,86 @@
+.#{$cls-pre}-sidebar-left {
+	background: none;
+	width: 200px;
+	@include clearfix();
+
+	.#{$cls-pre}-nav-menu {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		> li.ti-nav-item {
+			> a {
+				position: relative;
+				display: block;
+				padding-bottom: ($spacer - 5);
+				padding-top: ($spacer - 5);
+
+				.icn {
+					position: absolute;
+					right: 0;
+					padding-top: 3px;
+					font-weight: bold;
+					@include transition(transform 0.4s ease-in-out);
+				}
+			}
+
+			&.active > a {
+				color: $gray-dark;
+				font-weight: bold;
+			}
+
+			&.open {
+				> .#{$cls-pre}-nav-menu {
+					max-height: 500px;
+				}
+
+				.icn {
+					$deg: 180deg;
+					@include rotate($deg);
+				}
+			}
+
+			.#{$cls-pre}-nav-menu {
+				padding-left: ($spacer+7 + $spacer/2);
+				max-height: 0px;
+				overflow: hidden;
+				@include transition(max-height 0.4s ease-in-out);
+			}
+
+			li.ti-nav-item {
+				> a {
+					padding-top: 5px;
+					padding-bottom: 5px;
+				}
+			}
+
+			i.fa {
+				text-align: center;
+				width: ($spacer+7);
+				padding-right: ($spacer/2);
+			}
+		}
+	}
+
+	&.#{$cls-pre}-fixed-top {
+		top: ($body-top-padding - $spacer - 5);
+	}
+
+	&.#{$cls-pre}-absolute-top {
+		top: -($spacer - 5);
+	}
+
+	&.#{$cls-pre}-fixed-bottom, &.#{$cls-pre}-absolute-bottom {
+		bottom: 0;
+	}
+
+	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-fixed-bottom {
+		position: fixed;
+		z-index: $zindex-navbar-fixed - 100;
+	}
+
+	&.#{$cls-pre}-absolute-top, &.#{$cls-pre}-absolute-bottom {
+		position: absolute;
+		z-index: $zindex-navbar - 100;
+	}
+}

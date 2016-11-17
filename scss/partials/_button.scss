@@ -16,7 +16,7 @@
 	cursor: pointer;
 	@include touch-action(manipulation);
 	@include user-select(none);
-	@include tranisition(all 0.2s ease);
+	@include transition(all 0.2s ease);
 
 	&:hover, &:focus, &:active {
 		outline: $btn-active-outline;

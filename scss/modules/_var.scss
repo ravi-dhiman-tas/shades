@@ -97,6 +97,7 @@ $gray:                      #525252 !default;
 $gray-light:                #f6f6f6 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f7 !default;
+$gray-text:                 #a7a7a7 !default;
 
 $brand-primary:             #2b69a7 !default;
 $brand-green:               #4caf50 !default;
@@ -170,6 +171,7 @@ $body-bg:       #fff !default;
 $body-color:    $gray-dark !default;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
+$body-top-padding: 70px !default;
 
 
 // 5. Links
@@ -179,7 +181,7 @@ $inverse-color: $gray-lighter !default;
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 // 6. Grid breakpoints
@@ -212,8 +214,8 @@ $container-max-widths: (
 
 
 $wrap-max-widths: (
-  md: 650px,
-  lg: 820px
+  md: 550px,
+  lg: 720px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
@@ -312,8 +314,8 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          2px !default;
-$border-radius-lg:       2px !default;
+$border-radius:          3px !default;
+$border-radius-lg:       4px !default;
 $border-radius-sm:       2px !default;
 
 $component-active-color: #fff !default;
@@ -349,8 +351,8 @@ $table-border-color:            $gray-lighter !default;
 // For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-padding-x:                  3rem !default;
-$btn-padding-y:                  .5rem !default;
-$btn-line-height:                1.35 !default;
+$btn-padding-y:                  .6rem !default;
+$btn-line-height:                1.21 !default;
 $btn-font-weight:                $font-weight-normal !default;
 $btn-font-transform:             uppercase !default;
 $btn-font-spacing:               1px !default;
@@ -418,8 +420,8 @@ $btn-border-radius-sm:           $border-radius-sm !default;
 // 13. Forms
 
 $input-padding-x:                .75rem !default;
-$input-padding-y:                .5rem !default;
-$input-line-height:              1.25 !default;
+$input-padding-y:                .6rem !default;
+$input-line-height:              1.21 !default;
 
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
