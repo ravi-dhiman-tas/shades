@@ -29,7 +29,7 @@ title: Navbar Main
 	display: block;
 	width: 100%;
 	border-radius: $navbar-border-radius;
-	padding: $navbar-padding-y $navbar-padding-x;
+	padding: $navbar-padding-y 0;
 	position: relative;
 	@include clearfix();
 
@@ -115,32 +115,47 @@ title: Navbar Main
 			@include hexagon($gray-text, $brand-primary, 20px);
 		}
 	}
-
-	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-absolute-top {
-		top: 0;
-		left: 0;
-		right: 0;
-	}
-
-	&.#{$cls-pre}-fixed-bottom, &.#{$cls-pre}-absolute-bottom {
-		bottom: 0;
-		left: 0;
-		right: 0;
-	}
-
-	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-fixed-bottom {
-		position: fixed;
-		z-index: $zindex-navbar-fixed;
-	}
-
-	&.#{$cls-pre}-absolute-top, &.#{$cls-pre}-absolute-bottom {
-		position: absolute;
-		z-index: $zindex-navbar;
-	}
-
 }
 
 .#{$cls-pre}-navbar-main {
 	background: #fff;
 	box-shadow: $navbar-shadow;
+}
+
+.#{$cls-pre}-nav-top {
+	background: $gray-dark;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	text-align: center;
+
+	a {
+		color: #fff;
+		font-size: 0.9rem;
+
+		&:hover, &:focus {
+			color: $gray-light;
+		}
+	}
+}
+
+.#{$cls-pre}-fixed-top, .#{$cls-pre}-absolute-top {
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.#{$cls-pre}-fixed-bottom, .#{$cls-pre}-absolute-bottom {
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.#{$cls-pre}-fixed-top, .#{$cls-pre}-fixed-bottom {
+	position: fixed;
+	z-index: $zindex-navbar-fixed;
+}
+
+.#{$cls-pre}-absolute-top, .#{$cls-pre}-absolute-bottom {
+	position: absolute;
+	z-index: $zindex-navbar;
 }

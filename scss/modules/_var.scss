@@ -171,7 +171,7 @@ $body-bg:       #fff !default;
 $body-color:    $gray-dark !default;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
-$body-top-padding: 70px !default;
+$body-top-padding: 90px !default;
 
 
 // 5. Links
@@ -199,6 +199,16 @@ $grid-breakpoints: (
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
 @include _assert-starts-at-zero($grid-breakpoints);
 
+$wrap-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
 
 // 7. Grid containers
 //
@@ -212,10 +222,17 @@ $container-max-widths: (
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-
 $wrap-max-widths: (
-  md: 550px,
-  lg: 720px
+	md: 400px,
+	lg: 615px,
+	xl: 720px
+) !default;
+@include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
+
+$sidebar-max-widths: (
+	md: 180px,
+	lg: 180px,
+	xl: 220px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
@@ -352,12 +369,12 @@ $table-border-color:            $gray-lighter !default;
 
 $btn-padding-x:                  3rem !default;
 $btn-padding-y:                  .6rem !default;
-$btn-line-height:                1.21 !default;
+$btn-line-height:                normal !default;
 $btn-font-weight:                $font-weight-normal !default;
 $btn-font-transform:             uppercase !default;
-$btn-font-spacing:               1px !default;
-$btn-box-shadow:                 0 1px 0 rgba(0, 0, 0, 0), 0 1px 3px rgba(0, 0, 0, 0.12) !default;
-$btn-active-box-shadow:          0 2px 5px rgba(0, 0, 0, 0.14) !default;
+$btn-font-spacing:               0px !default;
+$btn-box-shadow:                 none !default;
+$btn-active-box-shadow:          none !default;
 $btn-active-outline:             none !default;
 
 $btn-default-color:              #888888 !default;
@@ -416,12 +433,16 @@ $btn-border-radius:              $border-radius !default;
 $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
 
+$btn-height:                     (($font-size-base * $line-height-base) + ($btn-padding-y * 2)) !default;
+$btn-height-lg:                  (($font-size-lg * $line-height-lg) + ($btn-padding-y-lg * 2)) !default;
+$btn-height-sm:                  (($font-size-sm * $line-height-sm) + ($btn-padding-y-sm * 2)) !default;
+
 
 // 13. Forms
 
 $input-padding-x:                .75rem !default;
 $input-padding-y:                .6rem !default;
-$input-line-height:              1.21 !default;
+$input-line-height:              normal !default;
 
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
