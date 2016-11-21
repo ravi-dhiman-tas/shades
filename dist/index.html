@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#2b69a7" />
 		<title>Navbar</title>
 		<link rel="icon" href="image/favicon.ico">
 		<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="no title">
@@ -37,8 +38,34 @@
 			<nav class="ti-navbar ti-navbar-main">
 				<div class="container">
 					<div class="ti-nav-logo">
-						<a href="/"><img src="image/logo_120_33.png" alt="Trusted Insight Logo" width="120" /></a>
+						<button type="button" class="ti-navbar-toggle collapsed" data-toggle-target=".ti-sidebar-left" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a href="/">
+							<img src="image/logo_120_33.png" class="ti-logo-blue" alt="Trusted Insight Logo" width="120" />
+							<img src="image/logo-name.png" class="ti-logo-black" alt="Trusted Insight Logo" width="120" />
+						</a>
 					</div>
+
+					<!-- for mobile -->
+					<div class="ti-nav-form-small">
+						<button class="ti-navbar-back" data-toggle-target=".ti-nav-form-small">
+							<i class="fa fa-arrow-left" aria-hidden="true"></i>
+						</button>
+						<form>
+							<div class="ti-input-group search-icon">
+								<span class="ti-input-group-icon">
+									<i class="fa fa-search" aria-hidden="true"></i>
+								</span>
+								<input type="text" class="ti-form-control" placeholder="Search...">
+							</div>
+						</form>
+					</div>
+					<!-- ./for-mobile -->
+
 					<div class="ti-nav-form">
 						<form>
 							<div class="ti-input-group search-icon">
@@ -53,6 +80,11 @@
 						</form>
 					</div>
 					<div class="ti-nav-navigation" role="navigation">
+						<div class="ti-nav-links search-btn">
+							<button type="button" name="button" class="ti-navbar-search" data-toggle-target=".ti-nav-form-small" data-hide=".ti-sidebar-left .ti-navbar-toggle">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</button>
+						</div>
 						<div class="ti-nav-links profile">
 							<div class="ti-profile-widget">
 								<div class="ti-profile-icon"></div>
@@ -70,7 +102,6 @@
 							<div class="ti-icon">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
 							</div>
-							<div class="ti-hexagon">0</div>
 						</div>
 					</div>
 				</div>
@@ -79,9 +110,26 @@
 
 		<div class="container">
 
-			<div class="ti-sidebar-left ti-absolute-top">
-				<ul class="ti-nav-menu">
+			<div class="ti-sidebar-left">
+				<ul class="ti-nav-menu visible-xs">
 					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-bookmark" aria-hidden="true"></i> Bookmarks</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-users" aria-hidden="true"></i> Contacts</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> Profile</a>
+					</li>
+					<li class="ti-nav-item">
+						<a href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+					</li>
+				</ul>
+				<ul class="ti-nav-menu divider">
+					<li class="ti-nav-item hidden-xs">
 						<a href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
 					</li>
 					<li class="ti-nav-item">
@@ -102,12 +150,14 @@
 							</li>
 						</ul>
 					</li>
-					<li class="ti-nav-item">
+					<li class="ti-nav-item menu">
 						<a href="#"><i class="fa fa-rss" aria-hidden="true"></i> News</a>
 					</li>
-					<li class="ti-nav-item">
+					<li class="ti-nav-item menu">
 						<a href="#"><i class="fa fa-calendar" aria-hidden="true"></i> Events</a>
 					</li>
+				</ul>
+				<ul class="ti-nav-menu">
 					<li class="ti-nav-item">
 						<a href="#"><i class="fa fa-building-o" aria-hidden="true"></i> Firms</a>
 					</li>
@@ -123,36 +173,38 @@
 				</ul>
 			</div>
 
-			<div class="ti-card-wrap">
-				<div class="ti-card-group">
-					<div class="ti-card">
-						<h1 class="ti-card-heading">Card</h1>
-						<div class="ti-card-thumbnail lg">
+			<div class="row">
+				<div class="ti-card-wrap">
+					<div class="ti-card-group">
+						<div class="ti-card">
+							<h1 class="ti-card-heading">Card</h1>
+							<div class="ti-card-thumbnail lg">
+							</div>
+						</div>
+						<div class="ti-card">
+							<h1>Card</h1>
+						</div>
+						<div class="ti-card">
+							<h1>Card</h1>
 						</div>
 					</div>
-					<div class="ti-card">
-						<h1>Card</h1>
-					</div>
-					<div class="ti-card">
-						<h1>Card</h1>
-					</div>
-				</div>
 
-				<div class="ti-card-container">
-					<div class="ti-card">
-						<h1 class="ti-card-heading">Card</h1>
-						<div class="ti-card-thumbnail lg">
-							<img src="" alt="" />
+					<div class="ti-card-container">
+						<div class="ti-card">
+							<h1 class="ti-card-heading">Card</h1>
+							<div class="ti-card-thumbnail lg">
+								<img src="" alt="" />
+							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="ti-card-container">
-					<div class="ti-card">
-						<h1 class="ti-card-heading">Card</h1>
-						<div class="ti-card-thumbnail lg vid">
-							<div class="icn">&times;</div>
-							<img src="" alt="" />
+					<div class="ti-card-container">
+						<div class="ti-card">
+							<h1 class="ti-card-heading">Card</h1>
+							<div class="ti-card-thumbnail lg vid">
+								<div class="icn">&times;</div>
+								<img src="" alt="" />
+							</div>
 						</div>
 					</div>
 				</div>

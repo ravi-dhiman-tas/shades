@@ -1,7 +1,30 @@
 .#{$cls-pre}-sidebar-left {
 	background: none;
+	position: absolute;
+	top: -($spacer - 5);
+	z-index: $zindex-navbar - 100;
 	@include make-sidebar-max-widths();
 	@include clearfix();
+	@include media-breakpoint-down(sm) {
+		background: $brand-primary;
+		position: fixed;
+		top: 55px;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		overflow-y: auto;
+		z-index: $zindex-navbar-fixed - 100;
+		padding-top: 10px;
+		padding-bottom: 20px;
+		max-width: 0%;
+		@include transition(all 0.2s ease-in-out);
+
+		&.open {
+			max-width: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
 
 	.#{$cls-pre}-nav-menu {
 		list-style: none;
@@ -15,9 +38,19 @@
 				padding: ($spacer - 5) ($spacer - 5);
 				border-radius: $border-radius;
 				@include transition(all 0.2s ease-in-out);
+				@include media-breakpoint-up(md) {
+					&:hover {
+						background: darken($gray-light, 5%);
+					}
+				}
 
-				&:hover {
-					background: darken($gray-light, 5%);
+				@include media-breakpoint-down(sm) {
+					color: #fff;
+					padding: $spacer $spacer;
+					white-space: nowrap;
+					&:hover {
+						background: lighten($brand-primary, 10%);
+					}
 				}
 
 				.icn {
@@ -30,8 +63,15 @@
 			}
 
 			&.active > a {
-				color: $gray-dark;
 				font-weight: bold;
+				@include media-breakpoint-up(md) {
+					color: $gray-dark;
+
+				}
+				@include media-breakpoint-down(sm) {
+					color: #fff;
+					background: lighten($brand-primary, 10%);
+				}
 			}
 
 			&.open {
@@ -45,17 +85,32 @@
 				}
 			}
 
+			> a.open {
+				@include media-breakpoint-down(sm) {
+					color: #fff;
+					background: lighten($brand-primary, 4%);
+				}
+			}
+
 			.#{$cls-pre}-nav-menu {
-				padding-left: ($spacer+7 + $spacer/2);
 				max-height: 0px;
 				overflow: hidden;
 				@include transition(max-height 0.4s ease-in-out);
+				@include media-breakpoint-up(md) {
+					padding-left: ($spacer+7 + $spacer/2);
+				}
+				@include media-breakpoint-down(sm) {
+					background: lighten($brand-primary, 2%);
+					border-radius: $border-radius;
+				}
 			}
 
 			li.ti-nav-item {
 				> a {
-					padding-top: 5px;
-					padding-bottom: 5px;
+					@include media-breakpoint-up(md) {
+						padding-top: 5px;
+						padding-bottom: 5px;
+					}
 				}
 			}
 
@@ -67,25 +122,11 @@
 		}
 	}
 
-	&.#{$cls-pre}-fixed-top {
-		top: ($body-top-padding - $spacer - 5);
-	}
-
-	&.#{$cls-pre}-absolute-top {
-		top: -($spacer - 5);
-	}
-
-	&.#{$cls-pre}-fixed-bottom, &.#{$cls-pre}-absolute-bottom {
-		bottom: 0;
-	}
-
-	&.#{$cls-pre}-fixed-top, &.#{$cls-pre}-fixed-bottom {
-		position: fixed;
-		z-index: $zindex-navbar-fixed - 100;
-	}
-
-	&.#{$cls-pre}-absolute-top, &.#{$cls-pre}-absolute-bottom {
-		position: absolute;
-		z-index: $zindex-navbar - 100;
+	.divider {
+		@include media-breakpoint-down(sm) {
+			border: 1px solid rgba(255,255,255,0.3);
+			border-left-width: 0;
+			border-right-width: 0;
+		}
 	}
 }

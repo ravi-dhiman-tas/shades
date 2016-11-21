@@ -10,6 +10,16 @@
 	vertical-align: middle;
 	line-height: 1.70;
 
+	@include media-breakpoint-up(md) {
+
+	}
+
+	@include media-breakpoint-down(sm) {
+		height: ($w - 5);
+		width: ($w/2) + 2;
+		line-height: 1.40;
+	}
+
 	&::before, &::after {
 		content: "";
 		position: absolute;
@@ -18,17 +28,28 @@
 		border-top: ($w/2) solid transparent;
 		border-bottom: ($w/2) solid transparent;
 		border-radius: $border-radius;
+
+		@include media-breakpoint-down(sm) {
+			border-top-width: ($w/2 - 2);
+			border-bottom-width: ($w/2 - 2);
+		}
 	}
 
 	&::before {
 		right: calc(100% - 1px);
 		border-right: ($w/4) solid $bgc;
+		@include media-breakpoint-down(sm) {
+			border-right-width: ($w/4 - 2);
+		}
 	}
 
 	&::after {
 		left: calc(100% - 1px);
 		width: 0;
 		border-left: ($w/4) solid $bgc;
+		@include media-breakpoint-down(sm) {
+			border-left-width: ($w/4 - 2);
+		}
 	}
 }
 

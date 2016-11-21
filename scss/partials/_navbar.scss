@@ -28,15 +28,142 @@ title: Navbar Main
 .#{$cls-pre}-navbar {
 	display: block;
 	width: 100%;
-	border-radius: $navbar-border-radius;
 	padding: $navbar-padding-y 0;
-	position: relative;
 	@include clearfix();
+	@include media-breakpoint-down(sm) {
+		padding: 10px 0;
+	}
+
+	.container {
+		@include media-breakpoint-down(sm) {
+			padding-left: 0px;
+			padding-right: 0px;
+			display: table;
+			width: 100%;
+		}
+	}
 
 	.#{$cls-pre}-nav-logo {
 		position: relative;
 		@include media-breakpoint-up(md) {
 			position: absolute;
+		}
+		@include media-breakpoint-down(sm) {
+			display: table-cell;
+			padding-left: 60px;
+			vertical-align: middle;
+		}
+
+		.#{$cls-pre}-logo-blue {
+			@include media-breakpoint-down(sm) {
+				display: none;
+			}
+		}
+
+		.#{$cls-pre}-logo-black {
+			@include media-breakpoint-up(md) {
+				display: none;
+			}
+		}
+
+		.#{$cls-pre}-navbar-toggle {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: -12px;
+			bottom: -10px;
+			background: none;
+			background-image: none;
+			border: none;
+			padding: 22px 18px;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+			cursor: pointer;
+
+			&:hover, &:focus {
+				outline: none;
+			}
+
+			@include media-breakpoint-down(sm) {
+				display: block;
+			}
+
+			.icon-bar {
+				display: block;
+				width: 20px;
+				height: 2px;
+				border-radius: 4px;
+				background: $brand-primary;
+
+				+ .icon-bar {
+					margin-top: 4px;
+				}
+			}
+
+			&.open {
+				background: lighten($brand-primary, 50%);
+
+				.icon-bar {
+					@include transition(transform 0.4s ease-in-out);
+					&:nth-child(3) {
+						visibility: hidden;
+					}
+
+					&:nth-child(2) {
+						transform: translate(2px, -2px) rotate(45deg);
+    					transform-origin: left center;
+					}
+
+					&:nth-child(4) {
+						transform: translate(2px, 0px) rotate(-45deg);
+    					transform-origin: left center;
+					}
+				}
+			}
+		}
+	}
+
+	.#{$cls-pre}-nav-form-small {
+		position: absolute;
+		top: -12px;
+		right: 0;
+		left: 100%;
+		padding: 13px 10px;
+		background: #fff;
+		max-width: 0%;
+		overflow: hidden;
+		@include transition(all 0.3s ease-in-out);
+
+		@include media-breakpoint-up(md) {
+			display: none;
+		}
+
+		&.open {
+			@include media-breakpoint-down(sm) {
+				max-width: 100%;
+				left: 0;
+			}
+		}
+
+		> form {
+			margin-left: 37px;
+			white-space: nowrap;
+
+			.#{$cls-pre}-form-control {
+				border: none;
+				font-size: 1.2rem;
+			}
+		}
+
+		.#{$cls-pre}-navbar-back {
+			position: absolute;
+			left: 7px;
+			background: none;
+			border: none;
+			background-image: none;
+			padding: 6px 10px;
+			color: $gray-text;
+			font-size: 1.2rem;
 		}
 	}
 
@@ -53,10 +180,13 @@ title: Navbar Main
 			margin: 0;
 			padding: 0;
 		}
+
+		@include media-breakpoint-down(sm) {
+			display: none;
+		}
 	}
 
 	.#{$cls-pre}-nav-navigation {
-		position: relative;
 		@include media-breakpoint-up(md) {
 			position: absolute;
 			right: 0;
@@ -64,17 +194,34 @@ title: Navbar Main
 			padding-top: 2px;
 		}
 
+		@include media-breakpoint-down(sm) {
+			display: table-cell;
+			vertical-align: middle;
+			float: right;
+		}
+
 		@include clearfix();
 
 		.#{$cls-pre}-nav-links {
 			float: right;
 			position: relative;
-			padding-top: 5px;
-			padding-bottom: 5px;
-			padding-left: 9px;
-			padding-right: 10px;
 			color: $gray-text;
 			vertical-align: middle;
+
+			@include media-breakpoint-up(md) {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				padding-left: 9px;
+				padding-right: 10px;
+			}
+
+			@include media-breakpoint-down(sm) {
+				font-size: 1.2rem;
+				padding-top: 8px;
+				padding-bottom: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
 
 			.#{$cls-pre}-icon, .#{$cls-pre}-hexagon {
 				display: inline-block;
@@ -88,13 +235,52 @@ title: Navbar Main
 				color: $brand-primary;
 
 				.#{$cls-pre}-hexagon {
-					@include hexagon-active($brand-primary);
+					@include media-breakpoint-up(md) {
+						@include hexagon-active($brand-primary);
+					}
+
+					@include media-breakpoint-down(sm) {
+						@include hexagon-active(lighten($brand-primary, 10%));
+					}
+				}
+			}
+
+			.#{$cls-pre}-hexagon {
+				@include media-breakpoint-down(sm) {
+					position: absolute;
+					top: 2px;
+					right: 12px;
 				}
 			}
 
 			&.profile {
 				padding-top: 0;
 				padding-bottom: 0;
+
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+			}
+
+			&.search-btn {
+				padding-top: 0;
+				padding-bottom: 0;
+				display: none;
+
+				@include media-breakpoint-down(sm) {
+					display: block;
+				}
+
+				.ti-navbar-search {
+					background: none;
+					background-image: none;
+					border: none;
+					padding: 7px 5px;
+
+					&:hover, &:focus {
+						outline: none;
+					}
+				}
 			}
 
 			.#{$cls-pre}-profile-widget {
@@ -112,7 +298,12 @@ title: Navbar Main
 		}
 
 		.#{$cls-pre}-hexagon {
-			@include hexagon($gray-text, $brand-primary, 20px);
+			@include media-breakpoint-up(md) {
+				@include hexagon($gray-text, $brand-primary, 20px);
+			}
+			@include media-breakpoint-down(sm) {
+				@include hexagon(lighten($gray-text, 10%), $brand-primary, 20px);
+			}
 		}
 	}
 }
@@ -135,6 +326,10 @@ title: Navbar Main
 		&:hover, &:focus {
 			color: $gray-light;
 		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		display: none;
 	}
 }
 
