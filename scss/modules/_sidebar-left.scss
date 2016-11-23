@@ -1,0 +1,12 @@
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+
+	-webkit-transform-origin: center 60%;
+	-moz-transform-origin: center 60%;
+	-mstransform-origin: center 60%;
+	transform-origin: center 60%;
+}

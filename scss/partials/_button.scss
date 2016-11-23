@@ -2,6 +2,7 @@
 	display: inline-block;
 	padding: $btn-padding-y $btn-padding-x;
 	line-height: $btn-line-height;
+	height: 34px;
 	font-size: $font-size-base;
 	font-weight: $btn-font-weight;
 	text-transform: $btn-font-transform;
@@ -16,7 +17,7 @@
 	cursor: pointer;
 	@include touch-action(manipulation);
 	@include user-select(none);
-	@include tranisition(all 0.2s ease);
+	@include transition(all 0.2s ease);
 
 	&:hover, &:focus, &:active {
 		outline: $btn-active-outline;

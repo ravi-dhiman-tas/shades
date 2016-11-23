@@ -7,7 +7,44 @@ body {
 	margin: 0;
 	padding: 0;
 
-	@include media-breakpoint-up(sm) {
+	-webkit-font-smoothing: antialiased;
+
+	@include media-breakpoint-up(md) {
 		background: $gray-lightest;
+		padding-top: $body-top-padding;
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding-top: ($body-top-padding - 30);
+	}
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+* {
+	@include borderbox();
+
+	&::before, &::after {
+		@include borderbox();
+	}
+}
+
+a {
+	color: $brand-primary;
+	text-decoration: $link-decoration;
+
+	&:hover, &:hover {
+		outline: none !important;
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration !important;
+	}
+}
+
+button {
+	&:hover, &:focus {
+		outline: none;
 	}
 }

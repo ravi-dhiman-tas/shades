@@ -1,0 +1,18 @@
+@mixin border-radius($r) {
+	-moz-border-radius: $r;
+	border-radius: $r;
+}
+
+@mixin border-right-radius($r) {
+	-moz-border-top-right-radius: $r;
+	border-top-right-radius: $r;
+	-moz-border-bottom-right-radius: $r;
+	border-bottom-right-radius: $r;
+}
+
+@mixin border-left-radius($r) {
+	-moz-border-top-left-radius: $r;
+	border-top-left-radius: $r;
+	-moz-border-bottom-left-radius: $r;
+	border-bottom-left-radius: $r;
+}

@@ -97,6 +97,7 @@ $gray:                      #525252 !default;
 $gray-light:                #f6f6f6 !default;
 $gray-lighter:              #eceeef !default;
 $gray-lightest:             #f7f7f7 !default;
+$gray-text:                 #a7a7a7 !default;
 
 $brand-primary:             #2b69a7 !default;
 $brand-green:               #4caf50 !default;
@@ -130,7 +131,7 @@ $enable-print-styles:       true !default;
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
 
-$spacer:   1rem !default;
+$spacer:   15px !default;
 $spacer-x: $spacer !default;
 $spacer-y: $spacer !default;
 $spacers: (
@@ -170,6 +171,7 @@ $body-bg:       #fff !default;
 $body-color:    $gray-dark !default;
 $inverse-bg:    $gray-dark !default;
 $inverse-color: $gray-lighter !default;
+$body-top-padding: 90px !default;
 
 
 // 5. Links
@@ -179,7 +181,7 @@ $inverse-color: $gray-lighter !default;
 $link-color:            $brand-primary !default;
 $link-decoration:       none !default;
 $link-hover-color:      darken($link-color, 15%) !default;
-$link-hover-decoration: underline !default;
+$link-hover-decoration: none !default;
 
 
 // 6. Grid breakpoints
@@ -188,6 +190,16 @@ $link-hover-decoration: underline !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+$wrap-breakpoints: (
   xs: 0,
   sm: 576px,
   md: 768px,
@@ -210,10 +222,17 @@ $container-max-widths: (
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
-
 $wrap-max-widths: (
-  md: 650px,
-  lg: 820px
+	md: 400px,
+	lg: 590px,
+	xl: 720px
+) !default;
+@include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
+
+$sidebar-max-widths: (
+	md: 180px,
+	lg: 180px,
+	xl: 220px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
@@ -244,10 +263,10 @@ $font-family-base:       $font-family-sans-serif !default;
 // Pixel value used to responsively scale all typography. Applied to the `<html>` element.
 $font-size-root: 14px !default;
 
-$font-size-base: 1rem !default;
-$font-size-lg:   1.25rem !default;
-$font-size-sm:   .875rem !default;
-$font-size-xs:   .75rem !default;
+$font-size-base: $font-size-root !default;
+$font-size-lg:   ceil(($font-size-base * 1.25)) !default;
+$font-size-sm:   ceil(($font-size-base * .875)) !default;
+$font-size-xs:   ceil(($font-size-base * .75)) !default;
 
 $font-weight-normal: normal !default;
 $font-weight-bold: bold !default;
@@ -255,17 +274,17 @@ $font-weight-bold: bold !default;
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
 
-$font-size-h1: 2.5rem !default;
-$font-size-h2: 2rem !default;
-$font-size-h3: 1.75rem !default;
-$font-size-h4: 1.5rem !default;
-$font-size-h5: 1.25rem !default;
-$font-size-h6: 1rem !default;
+$font-size-h1: ceil(($font-size-base * 2.5)) !default;
+$font-size-h2: ceil(($font-size-base * 2)) !default;
+$font-size-h3: ceil(($font-size-base * 1.75)) !default;
+$font-size-h4: ceil(($font-size-base * 1.5)) !default;
+$font-size-h5: ceil(($font-size-base * 1.25)) !default;
+$font-size-h6: ceil(($font-size-base * 1)) !default;
 
-$display1-size: 6rem !default;
-$display2-size: 5.5rem !default;
-$display3-size: 4.5rem !default;
-$display4-size: 3.5rem !default;
+$display1-size: ceil(($font-size-base * 6)) !default;
+$display2-size: ceil(($font-size-base * 5.5)) !default;
+$display3-size: ceil(($font-size-base * 4.5)) !default;
+$display4-size: ceil(($font-size-base * 3.5)) !default;
 
 $display1-weight: 300 !default;
 $display2-weight: 300 !default;
@@ -278,7 +297,7 @@ $headings-font-weight:   500 !default;
 $headings-line-height:   1.1 !default;
 $headings-color:         inherit !default;
 
-$lead-font-size:   1.25rem !default;
+$lead-font-size:   ceil(($font-size-base * 1.25)) !default;
 $lead-font-weight: 300 !default;
 
 $small-font-size: 80% !default;
@@ -290,7 +309,7 @@ $abbr-border-color: $gray-light !default;
 $blockquote-small-color:  $gray-light !default;
 $blockquote-font-size:    ($font-size-base * 1.25) !default;
 $blockquote-border-color: $gray-lighter !default;
-$blockquote-border-width: .25rem !default;
+$blockquote-border-width: ceil(($font-size-base * 0.25)) !default;
 
 $hr-border-color: rgba(0,0,0,.1) !default;
 $hr-border-width: $border-width !default;
@@ -312,8 +331,8 @@ $list-inline-padding: 5px !default;
 $line-height-lg:         (4 / 3) !default;
 $line-height-sm:         1.5 !default;
 
-$border-radius:          2px !default;
-$border-radius-lg:       2px !default;
+$border-radius:          3px !default;
+$border-radius-lg:       4px !default;
 $border-radius-sm:       2px !default;
 
 $component-active-color: #fff !default;
@@ -327,8 +346,8 @@ $caret-width-lg:         $caret-width !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:            .75rem !default;
-$table-sm-cell-padding:         .3rem !default;
+$table-cell-padding:            ceil(($font-size-base * 0.75)) !default;
+$table-sm-cell-padding:         ceil(($font-size-base * 0.3)) !default;
 
 $table-bg:                      transparent !default;
 $table-bg-inverse:              $gray-dark !default;
@@ -348,14 +367,14 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  3rem !default;
-$btn-padding-y:                  .5rem !default;
-$btn-line-height:                1.35 !default;
+$btn-padding-x:                  ceil(($font-size-base * 3)) !default;
+$btn-padding-y:                  ceil(($font-size-base * 0.6)) !default;
+$btn-line-height:                normal !default;
 $btn-font-weight:                $font-weight-normal !default;
 $btn-font-transform:             uppercase !default;
-$btn-font-spacing:               1px !default;
-$btn-box-shadow:                 0 1px 0 rgba(0, 0, 0, 0), 0 1px 3px rgba(0, 0, 0, 0.12) !default;
-$btn-active-box-shadow:          0 2px 5px rgba(0, 0, 0, 0.14) !default;
+$btn-font-spacing:               0px !default;
+$btn-box-shadow:                 none !default;
+$btn-active-box-shadow:          none !default;
 $btn-active-outline:             none !default;
 
 $btn-default-color:              #888888 !default;
@@ -400,26 +419,30 @@ $btn-danger-border:              $btn-danger-bg !default;
 
 $btn-link-disabled-color:        $gray-light !default;
 
-$btn-padding-x-sm:               1.5rem !default;
-$btn-padding-y-sm:               .25rem !default;
+$btn-padding-x-sm:               ceil(($font-size-base * 1.5)) !default;
+$btn-padding-y-sm:               ceil(($font-size-base * 0.25)) !default;
 
-$btn-padding-x-lg:               3rem !default;
-$btn-padding-y-lg:               .75rem !default;
+$btn-padding-x-lg:               ceil(($font-size-base * 3)) !default;
+$btn-padding-y-lg:               ceil(($font-size-base * 0.75)) !default;
 
-$btn-block-spacing-y:            .5rem !default;
-$btn-toolbar-margin:             .5rem !default;
+$btn-block-spacing-y:            ceil(($font-size-base * 0.5)) !default;
+$btn-toolbar-margin:             ceil(($font-size-base * 0.5)) !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius:              $border-radius !default;
 $btn-border-radius-lg:           $border-radius-lg !default;
 $btn-border-radius-sm:           $border-radius-sm !default;
 
+$btn-height:                     (($font-size-base * $line-height-base) + ($btn-padding-y * 2)) !default;
+$btn-height-lg:                  (($font-size-lg * $line-height-lg) + ($btn-padding-y-lg * 2)) !default;
+$btn-height-sm:                  (($font-size-sm * $line-height-sm) + ($btn-padding-y-sm * 2)) !default;
+
 
 // 13. Forms
 
-$input-padding-x:                .75rem !default;
-$input-padding-y:                .5rem !default;
-$input-line-height:              1.25 !default;
+$input-padding-x:                ceil(($font-size-base * 0.75)) !default;
+$input-padding-y:                ceil(($font-size-base * 0.6)) !default;
+$input-line-height:              normal !default;
 
 $input-bg:                       #fff !default;
 $input-bg-disabled:              $gray-lighter !default;
@@ -440,11 +463,11 @@ $input-color-focus:              $input-color !default;
 
 $input-color-placeholder:        #999 !default;
 
-$input-padding-x-sm:             .5rem !default;
-$input-padding-y-sm:             .25rem !default;
+$input-padding-x-sm:             ceil(($font-size-base * 0.5)) !default;
+$input-padding-y-sm:             ceil(($font-size-base * 0.25)) !default;
 
-$input-padding-x-lg:             1.5rem !default;
-$input-padding-y-lg:             .75rem !default;
+$input-padding-x-lg:             ceil(($font-size-base * 1.5)) !default;
+$input-padding-y-lg:             ceil(($font-size-base * 0.75)) !default;
 
 $input-height:                   (($font-size-base * $line-height-base) + ($input-padding-y * 2)) !default;
 $input-height-lg:                (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2)) !default;
@@ -595,6 +618,7 @@ $zindex-tooltip:           1070 !default;
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-x:                  $spacer !default;
 $navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-shadow:                     0 2px 3px rgba(0,0,0,0.12) !default;
 
 $navbar-brand-padding-y:            .25rem !default;
 

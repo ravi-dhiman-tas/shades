@@ -51,7 +51,7 @@ module.exports = function(grunt) {
             },
             watch_sass: {
                 files: ['**/*.scss'],
-                tasks: ['sass'],
+                tasks: ['sass:dist'],
                 options: {
                     spawn: false,
                 },
@@ -65,7 +65,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('remove',['clean:clean_sass']);
     grunt.registerTask('babel_build',['babel']);
-    grunt.registerTask('build', ['sass:dist', 'babel']);
+    grunt.registerTask('build', ['sass:dist']);
     grunt.registerTask('production',['sass:dist_compressed']);
 	grunt.registerTask('default',['watch']);
 }
