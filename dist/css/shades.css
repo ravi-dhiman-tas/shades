@@ -378,25 +378,7 @@ button:hover, button:focus {
 }
 
 /*---
-title: Navbar
-resume: The navbar page
-section: Navbar
----
-
-``shades`` includes predefined **navbar** styles.
-
-```html
-<nav class="navbar"></nav>
-```
-
-*/
-/*---
-title: Navbar Main
----
-
-```html
-<nav class="navbar navbar-main"></nav>
-```
+	- main navbar
 */
 .container {
   position: relative;
@@ -693,6 +675,7 @@ title: Navbar Main
   padding-top: 0;
   padding-bottom: 0;
   border-radius: 50%;
+  border: none;
   background: #a7a7a7;
   width: 30px;
   height: 30px;
