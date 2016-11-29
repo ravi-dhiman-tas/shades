@@ -1,7 +1,7 @@
 .#{$cls-pre}-sidebar-left {
 	background: none;
 	position: absolute;
-	top: -($spacer - 5);
+	top: 0;
 	z-index: $zindex-navbar - 100;
 	@include make-sidebar-max-widths();
 	@include clearfix();

@@ -102,9 +102,9 @@ $gray-text:                 #a7a7a7 !default;
 $brand-primary:             #2b69a7 !default;
 $brand-green:               #4caf50 !default;
 $brand-red:                 #db4e3f !default;
-$brand-orange:              #eab911 !default;
+$brand-orange:              #f6a623 !default;
 $brand-disabled:            #777777 !default;
-$brand-success:             #5cb85c !default;
+$brand-success:             #afd266 !default;
 $brand-info:                #5bc0de !default;
 $brand-warning:             #f0ad4e !default;
 $brand-danger:              #d9534f !default;
@@ -222,17 +222,25 @@ $container-max-widths: (
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 
+$custom-container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1125px
+) !default;
+@include _assert-ascending($custom-container-max-widths, "$custom-container-max-widths");
+
 $wrap-max-widths: (
-	md: 400px,
+	md: 350px,
 	lg: 590px,
-	xl: 720px
+	xl: 670px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
 $sidebar-max-widths: (
 	md: 180px,
 	lg: 180px,
-	xl: 220px
+	xl: 205px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
@@ -367,11 +375,11 @@ $table-border-color:            $gray-lighter !default;
 //
 // For each of Bootstrap's buttons, define text, background and border color.
 
-$btn-padding-x:                  ceil(($font-size-base * 3)) !default;
-$btn-padding-y:                  ceil(($font-size-base * 0.6)) !default;
+$btn-padding-x:                  ceil(($font-size-base * 1)) !default;
+$btn-padding-y:                  ceil(($font-size-base * 0.5)) !default;
 $btn-line-height:                normal !default;
-$btn-font-weight:                $font-weight-normal !default;
-$btn-font-transform:             uppercase !default;
+$btn-font-weight:                $font-weight-bold !default;
+$btn-font-transform:             none !default;
 $btn-font-spacing:               0px !default;
 $btn-box-shadow:                 none !default;
 $btn-active-box-shadow:          none !default;

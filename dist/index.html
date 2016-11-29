@@ -10,24 +10,24 @@
 		<link rel="stylesheet" href="css/font-awesome.min.css" media="screen" title="no title">
 		<link rel="stylesheet" href="css/shades.css" media="screen" title="no title">
 	</head>
-	<body>
+	<body class="valid-body">
 
 		<header class="ti-fixed-top" role="nav">
 			<nav class="ti-nav-top">
-				<div class="container">
+				<div class="ti-container">
 					<div class="row">
-						<div class="col-md-6 col-md-offset-3">
+						<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 							<div class="row">
-								<div class="col-md-3">
+								<div class="col-md-3 col-sm-3">
 									<a href="#">Bookmarks</a>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-3 col-sm-3">
 									<a href="#">Contacts</a>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-3 col-sm-3">
 									<a href="#">Profile</a>
 								</div>
-								<div class="col-md-3">
+								<div class="col-md-3 col-sm-3">
 									<a href="#">Settings</a>
 								</div>
 							</div>
@@ -36,7 +36,7 @@
 				</div>
 			</nav>
 			<nav class="ti-navbar ti-navbar-main">
-				<div class="container">
+				<div class="ti-container">
 					<div class="ti-nav-logo">
 						<button type="button" class="ti-navbar-toggle collapsed" data-toggle-target=".ti-sidebar-left" aria-expanded="false">
 							<span class="sr-only">Toggle navigation</span>
@@ -57,10 +57,10 @@
 						</button>
 						<form>
 							<div class="ti-input-group search-icon">
+								<input type="text" class="ti-form-control" placeholder="Search...">
 								<span class="ti-input-group-icon">
 									<i class="fa fa-search" aria-hidden="true"></i>
 								</span>
-								<input type="text" class="ti-form-control" placeholder="Search...">
 							</div>
 						</form>
 					</div>
@@ -69,10 +69,10 @@
 					<div class="ti-nav-form">
 						<form>
 							<div class="ti-input-group search-icon">
+								<input type="text" class="ti-form-control" placeholder="Search...">
 								<span class="ti-input-group-icon">
 									<i class="fa fa-search" aria-hidden="true"></i>
 								</span>
-								<input type="text" class="ti-form-control" placeholder="Search...">
 								<span class="ti-input-group-btn">
 									<button class="ti-btn sbtn ti-btn-primary" type="button">Search</button>
 								</span>
@@ -109,13 +109,14 @@
 							<div class="ti-icon">
 								<i class="fa fa-envelope" aria-hidden="true"></i>
 							</div>
+							<div class="ti-hexagon">0</div>
 						</div>
 					</div>
 				</div>
 			</nav>
 		</header>
 
-		<div class="container">
+		<div class="ti-container">
 
 			<div class="ti-sidebar-left">
 				<ul class="ti-nav-menu visible-xs">
@@ -180,6 +181,31 @@
 				</ul>
 			</div>
 
+			<div class="ti-sidebar-right">
+				<div class="ti-user-overview">
+					<h4>Your Name</h4>
+
+					<div class="ti-user-widget">
+						<div class="ti-user-image">
+							<img src="" alt="">
+						</div>
+						<div class="ti-user-trust">
+							<div class="ti-progressbar ti-progressbar-success text-up">
+								<span class="caption">90% Complete</span>
+								<div class="ti-progress" width="25%">
+								</div>
+							</div>
+							<a href=""><strong>Edit Your Profile</strong></a>
+						</div>
+					</div>
+
+				</div>
+
+				<h4>Grow Your Network</h4>
+				<p>Send invites to your peers</p>
+				<a href="#" class="ti-btn ti-btn-outline-primary">Complete Your Profile</a>
+			</div>
+
 			<div class="row">
 				<div class="ti-card-wrap">
 					<div class="ti-card-group">
@@ -212,6 +238,8 @@
 								<div class="icn">&times;</div>
 								<img src="" alt="" />
 							</div>
+							<button class="ti-btn ti-btn-outline-primary ti-btn-lg">Large</button>
+							<button class="ti-btn ti-btn-outline-primary ti-btn-sm">Small</button>
 						</div>
 					</div>
 				</div>

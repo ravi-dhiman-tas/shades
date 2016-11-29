@@ -37,16 +37,19 @@
 	}
 
 	&.#{$cls-pre}-btn-lg {
+		height: $btn-height-lg;
 		padding: $btn-padding-y-lg $btn-padding-x-lg;
 		font-size: $font-size-lg;
 	}
 
 	&.#{$cls-pre}-btn-sm {
+		height: $btn-height-sm;
 		padding: $btn-padding-y-sm $btn-padding-x-sm;
 		font-size: $font-size-sm;
 	}
 
 	&.#{$cls-pre}-btn-xs {
+		height: $btn-height-sm;
 		padding: $btn-padding-y-sm $btn-padding-x-sm;
 		font-size: $font-size-xs;
 	}
@@ -139,6 +142,97 @@
 
 	&:active {
 		@include btn-focus($btn-orange-color, $btn-orange-bg, $btn-orange-border);
+	}
+}
+
+/* button outline */
+.#{$cls-pre}-btn-outline-default {
+	color: $btn-default-bg;
+	background: transparent;
+	border-color: $btn-default-border;
+
+	&:hover {
+		@include btn-outline-default-hover($btn-default-bg, $btn-default-border);
+	}
+
+	&:focus {
+		color: $btn-default-bg;
+	}
+
+	&:active {
+		@include btn-outline-focus($btn-default-bg, $btn-default-border);
+	}
+}
+
+.#{$cls-pre}-btn-outline-primary {
+	color: $btn-primary-bg;
+	background: transparent;
+	border-color: $btn-primary-border;
+
+	&:hover {
+		@include btn-outline-hover($btn-primary-bg, $btn-primary-border);
+	}
+
+	&:focus {
+		color: $btn-primary-bg;
+	}
+
+	&:active {
+		@include btn-outline-focus($btn-primary-bg, $btn-primary-border);
+	}
+}
+
+.#{$cls-pre}-btn-red {
+	color: $btn-red-bg;
+	background: transparent;
+	border-color: $btn-red-border;
+
+	&:hover {
+		@include btn-outline-hover($btn-red-bg, $btn-red-border);
+	}
+
+	&:focus {
+		color: $btn-red-bg;
+	}
+
+	&:active {
+		@include btn-outline-focus($btn-red-bg, $btn-red-border);
+	}
+}
+
+.#{$cls-pre}-btn-green {
+	color: $btn-green-bg;
+	background: transparent;
+	border-color: $btn-green-border;
+
+	&:hover {
+		@include btn-outline-hover($btn-green-bg, $btn-green-border);
+	}
+
+	&:focus {
+		color: $btn-green-bg;
+	}
+
+	&:active {
+		@include btn-outline-focus($btn-green-bg, $btn-green-border);
+	}
+}
+
+.#{$cls-pre}-btn-orange {
+	color: $btn-orange-bg;
+	background: transparent;
+	border-color: $btn-orange-border;
+
+	&:hover {
+		@include btn-outline-hover($btn-orange-bg, $btn-orange-border);
+	}
+
+	&:focus {
+		color: $btn-orange-bg;
+	}
+
+	&:active {
+		@include btn-outline-focus($btn-orange-bg, $btn-orange-border);
 	}
 }
 

@@ -10,6 +10,15 @@
 	}
 }
 
+.#{$cls-pre}-container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: $spacer;
+	padding-right: $spacer;
+	@include clearfix();
+	@include make-custom-container-max-widths();
+}
+
 .#{$cls-pre}-card-wrap {
 	margin-left: auto;
 	margin-right: auto;

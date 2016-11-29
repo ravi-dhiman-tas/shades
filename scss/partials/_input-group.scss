@@ -117,6 +117,10 @@
 	border-left: 0;
 }
 
+.#{$cls-pre}-form-control:focus + .#{$cls-pre}-input-group-icon {
+	color: $brand-primary;
+}
+
 .#{$cls-pre}-input-group-btn {
 	position: relative;
 	font-size: 0;

@@ -45,6 +45,18 @@
 	&:disabled {
 		cursor: $cursor-disabled;
 	}
+
+	&:hover {
+		border-color: darken($gray-light, 30%);
+	}
+
+	&:focus {
+		border-color: $brand-primary;
+	}
+
+	&:focus:hover {
+		border-color: darken($brand-primary, 5%);
+	}
 }
 
 select.form-control {

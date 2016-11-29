@@ -4,18 +4,29 @@ html {
 
 body {
 	font-size: $font-size-base;
-	margin: 0;
-	padding: 0;
-
-	-webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    padding-top: 70px;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
 
 	@include media-breakpoint-up(md) {
 		background: $gray-lightest;
-		padding-top: $body-top-padding;
 	}
 
 	@include media-breakpoint-down(sm) {
-		padding-top: ($body-top-padding - 30);
+		padding-top: ($body-top-padding - 23);
+	}
+
+	&.valid-body {
+		@include media-breakpoint-up(md) {
+			padding-top: $body-top-padding;
+		}
+
+		@include media-breakpoint-down(sm) {
+			padding-top: ($body-top-padding - 30);
+		}
 	}
 }
 
@@ -36,10 +47,10 @@ a {
 	color: $brand-primary;
 	text-decoration: $link-decoration;
 
-	&:hover, &:hover {
+	&:hover, &:focus {
 		outline: none !important;
 		color: $link-hover-color;
-		text-decoration: $link-hover-decoration !important;
+		text-decoration: none !important;
 	}
 }
 

@@ -50,6 +50,27 @@
 	box-shadow: 0 0 1px transparent;
 }
 
+@mixin btn-outline-default-hover($color, $border) {
+	color: darken($color, 15%);
+	border-color: darken($border, 3%);
+}
+
+@mixin btn-outline-hover($color, $border) {
+	color: $color;
+	border-color: darken($border, 5%);
+}
+
+@mixin btn-outline-focus($color, $border) {
+	color: $color;
+	background: darken($border, 15%);
+	border-color: darken($border, 15%);
+}
+
+@mixin btn-outline-disabled($color, $border) {
+	color: lighten($color, 25%);
+	border-color: darken($border, 7%);
+}
+
 @mixin btn-border-radius($radius) {
 	-moz-border-radius: $radius;
 	border-radius: $radius;
