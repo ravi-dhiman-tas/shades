@@ -1,46 +1,35 @@
-html {
-	font-size: $font-size-root;
-}
-
-body {
-	font-size: $font-size-base;
-    margin: 0;
-    padding: 0;
-    padding-top: 70px;
-    background: #fff;
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
-
-	@include media-breakpoint-up(md) {
-		background: $gray-lightest;
-	}
-
-	@include media-breakpoint-down(sm) {
-		padding-top: ($body-top-padding - 23);
-	}
-
-	&.valid-body {
-		@include media-breakpoint-up(md) {
-			padding-top: $body-top-padding;
-		}
-
-		@include media-breakpoint-down(sm) {
-			padding-top: ($body-top-padding - 30);
-		}
-	}
-}
-
-img {
-	vertical-align: middle;
-	max-width: 100%;
-}
-
 * {
 	@include borderbox();
 
 	&::before, &::after {
 		@include borderbox();
 	}
+}
+
+html {
+	font-size: $font-size-base;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: $font-size-base;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: none;
+
+	@include media-breakpoint-up(md) {
+		background: #f7f7f7;
+	}
+
+	@include media-breakpoint-down(sm) {
+		background: #fff;
+	}
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
 }
 
 a {

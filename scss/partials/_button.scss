@@ -239,3 +239,11 @@
 .#{$cls-pre}-btn-block {
 	width: 100%;
 }
+
+.#{$cls-pre}-btn-link {
+	background: transparent!important;
+	border-width: 0!important;
+	&:hover, &:focus {
+		@include btn-link-hover()
+	}
+}

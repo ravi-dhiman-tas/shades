@@ -1,0 +1,5 @@
+$max-range: 200;
+$step: 5;
+$spacing: margin;
+
+@include make-spacing($spacing, $max-range, $step);

@@ -4,7 +4,7 @@
 
 	@include media-breakpoint-up(sm) {
 		background: $card-bg;
-		border-radius: $border-radius * 2;
+		border-radius: $border-radius;
 		box-shadow: $card-box-shadow;
 		border: $card-border-width solid $card-border-color;
 	}

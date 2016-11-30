@@ -6,13 +6,34 @@
 	position: relative;
 }
 
+.#{$cls-pre}-header-wrap {
+	height: 77px;
+	margin-bottom: $spacer;
+}
+
+.#{$cls-pre}-nav-wrap {
+	position: relative;
+	@include clearfix();
+}
+
 .#{$cls-pre}-navbar {
 	display: block;
 	width: 100%;
 	padding: $navbar-padding-y 0;
 	@include clearfix();
+	@include media-breakpoint-up(md) {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		@include transition(top 0.5s ease-in-out);
+	}
 	@include media-breakpoint-down(sm) {
 		padding: 10px 0;
+	}
+
+	&.sticky {
+		top: 27px;
 	}
 
 	.#{$cls-pre}-container {
@@ -341,12 +362,18 @@
 }
 
 .#{$cls-pre}-nav-top {
+	position: absolute;
+	top: 0;
+	width: 100%;
 	background: $gray-dark;
-	padding-top: 3px;
-	padding-bottom: 3px;
 	text-align: center;
+	overflow: hidden;
+	@include transition(top 0.5s ease-in-out);
 
 	a {
+		display: inline-block;
+		padding-top: 2px;
+		padding-bottom: 2px;
 		color: #fff;
 		font-size: 0.9rem;
 

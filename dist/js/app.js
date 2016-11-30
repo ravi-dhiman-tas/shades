@@ -40,5 +40,34 @@ $(function () {
 			}
 		});
 	});
+
+	stickyNavbar();
 });
+
+function stickyNavbar() {
+	var headTop = $(".ti-nav-top"),
+	    headMain = $(".ti-navbar"),
+		prevScroll = window.scrollY || 0;
+
+	if(headTop.length == 0 || headTop.length > 1 || headMain.length == 0 || headMain.length > 1) {
+		return;
+	}
+
+	if(window.innerWidth < 768) {
+		return;
+	}
+
+	$(window).scroll(function(event) {
+		var scrollY = window.scrollY || 0;
+		if(scrollY > prevScroll) {
+			headTop.css("top", "-" + headTop.height());
+			headMain.css("top", "0px");
+		} else {
+			headTop.css("top", "0px");
+			headMain.css("top", headTop.height());
+		}
+		prevScroll = scrollY;
+	});
+}
+
 //# sourceMappingURL=app.js.map
