@@ -60,7 +60,7 @@ function stickyNavbar() {
 	$(window).scroll(function(event) {
 		var scrollY = window.scrollY || 0;
 		if(scrollY > prevScroll) {
-			headTop.css("top", "-" + headTop.height());
+			headTop.css("top", (-headTop.height()));
 			headMain.css("top", "0px");
 		} else {
 			headTop.css("top", "0px");

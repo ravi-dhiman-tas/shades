@@ -354,7 +354,7 @@ button:hover, button:focus {
 }
 @media (min-width: 1200px) {
   .ti-container {
-    width: 1125px;
+    width: 1140px;
     max-width: 100%;
   }
 }
@@ -382,7 +382,7 @@ button:hover, button:focus {
 }
 @media (min-width: 1200px) {
   .ti-card-wrap {
-    width: 670px;
+    width: 720px;
     max-width: 100%;
   }
 }
@@ -524,8 +524,8 @@ button:hover, button:focus {
 }
 
 .ti-header-wrap {
-  height: 77px;
-  margin-bottom: 15px;
+  height: 64px;
+  margin-bottom: 13px;
 }
 
 .ti-nav-wrap {
@@ -540,7 +540,6 @@ button:hover, button:focus {
 .ti-navbar {
   display: block;
   width: 100%;
-  padding: 7.5px 0;
 }
 .ti-navbar::after {
   content: "";
@@ -559,13 +558,8 @@ button:hover, button:focus {
     transition: top 0.5s ease-in-out;
   }
 }
-@media (max-width: 767px) {
-  .ti-navbar {
-    padding: 10px 0;
-  }
-}
 .ti-navbar.sticky {
-  top: 27px;
+  top: 20px;
 }
 @media (max-width: 767px) {
   .ti-navbar .ti-container {
@@ -577,6 +571,8 @@ button:hover, button:focus {
 }
 .ti-navbar .ti-nav-logo {
   position: relative;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 @media (min-width: 768px) {
   .ti-navbar .ti-nav-logo {
@@ -587,6 +583,8 @@ button:hover, button:focus {
   .ti-navbar .ti-nav-logo {
     display: table-cell;
     padding-left: 60px;
+    padding-top: 14px;
+    padding-bottom: 14px;
     vertical-align: middle;
   }
 }
@@ -619,8 +617,8 @@ button:hover, button:focus {
   display: none;
   position: absolute;
   left: 0;
-  top: -12px;
-  bottom: -10px;
+  top: 0px;
+  bottom: 0px;
   background: none;
   background-image: none;
   border: none;
@@ -665,7 +663,7 @@ button:hover, button:focus {
   transform-origin: left center;
 }
 .ti-navbar .ti-nav-logo .ti-navbar-toggle.open {
-  background: #dbe9f6;
+  background: rgba(43, 105, 167, 0.15);
 }
 .ti-navbar .ti-nav-logo .ti-navbar-toggle.open .icon-bar:nth-child(3) {
   -webkit-transform: translate(-50px, 0px);
@@ -682,7 +680,7 @@ button:hover, button:focus {
 }
 .ti-navbar .ti-nav-form-small {
   position: absolute;
-  top: -12px;
+  top: 0px;
   right: 0;
   left: 100%;
   padding: 13px 10px;
@@ -729,6 +727,8 @@ button:hover, button:focus {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 @media (min-width: 768px) {
   .ti-navbar .ti-nav-form {
@@ -744,7 +744,7 @@ button:hover, button:focus {
 }
 @media (min-width: 1200px) {
   .ti-navbar .ti-nav-form {
-    width: 670px;
+    width: 720px;
     max-width: 100%;
   }
 }
@@ -763,7 +763,6 @@ button:hover, button:focus {
     position: absolute;
     right: 0;
     top: 0;
-    padding-top: 2px;
   }
 }
 @media (max-width: 767px) {
@@ -798,22 +797,28 @@ button:hover, button:focus {
 .ti-navbar .ti-nav-navigation .ti-nav-links i.fa {
   color: #a7a7a7;
 }
+.ti-navbar .ti-nav-navigation .ti-nav-links > a {
+  display: block;
+}
 @media (min-width: 768px) {
-  .ti-navbar .ti-nav-navigation .ti-nav-links {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 9px;
-    padding-right: 10px;
+  .ti-navbar .ti-nav-navigation .ti-nav-links > a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 11px;
+    padding-right: 21px;
   }
 }
 @media (max-width: 767px) {
-  .ti-navbar .ti-nav-navigation .ti-nav-links {
+  .ti-navbar .ti-nav-navigation .ti-nav-links > a {
     font-size: 1.2rem;
-    padding-top: 8px;
-    padding-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 18px 10px;
   }
+}
+.ti-navbar .ti-nav-navigation .ti-nav-links > a:hover {
+  background-color: rgba(43, 105, 167, 0.05);
+}
+.ti-navbar .ti-nav-navigation .ti-nav-links > a:focus {
+  background-color: rgba(43, 105, 167, 0.15);
 }
 .ti-navbar .ti-nav-navigation .ti-nav-links .ti-icon, .ti-navbar .ti-nav-navigation .ti-nav-links .ti-hexagon {
   display: inline-block;
@@ -842,13 +847,15 @@ button:hover, button:focus {
 @media (max-width: 767px) {
   .ti-navbar .ti-nav-navigation .ti-nav-links .ti-hexagon {
     position: absolute;
-    top: 2px;
+    top: 13px;
     right: 12px;
   }
 }
-.ti-navbar .ti-nav-navigation .ti-nav-links.profile {
-  padding-top: 0;
-  padding-bottom: 0;
+.ti-navbar .ti-nav-navigation .ti-nav-links.profile > a {
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 8px;
+  padding-left: 8px;
 }
 @media (max-width: 767px) {
   .ti-navbar .ti-nav-navigation .ti-nav-links.profile {
@@ -869,15 +876,13 @@ button:hover, button:focus {
   background: none;
   background-image: none;
   border: none;
-  padding: 7px 5px;
+  padding: 18px 15px;
 }
 .ti-navbar .ti-nav-navigation .ti-nav-links.search-btn .ti-navbar-search:hover, .ti-navbar .ti-nav-navigation .ti-nav-links.search-btn .ti-navbar-search:focus {
   outline: none;
 }
-.ti-navbar .ti-nav-navigation .ti-nav-links .ti-profile-widget > .ti-profile-icon {
+.ti-navbar .ti-nav-navigation .ti-nav-links .ti-profile-icon {
   display: block;
-  padding-top: 0;
-  padding-bottom: 0;
   border-radius: 50%;
   border: none;
   background: #a7a7a7;
@@ -886,7 +891,7 @@ button:hover, button:focus {
   overflow: hidden;
 }
 .ti-navbar .ti-nav-navigation .ti-hexagon {
-  position: relative;
+  position: absolute;
   height: 20px;
   width: 14px;
   border-radius: 3px;
@@ -899,8 +904,8 @@ button:hover, button:focus {
 }
 @media (min-width: 768px) {
   .ti-navbar .ti-nav-navigation .ti-hexagon {
-    left: -10px;
-    top: -1px;
+    right: 14px;
+    top: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -951,14 +956,16 @@ button:hover, button:focus {
 
 .ti-navbar-main {
   background: #fff;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 2px 0 rgba(31, 54, 77, 0.25);
 }
 
 .ti-nav-top {
   position: absolute;
-  top: 0;
+  top: 0px;
+  left: 0;
+  right: 0;
   width: 100%;
-  background: #373a3c;
+  background: #43484d;
   text-align: center;
   overflow: hidden;
   -moz-transition: top 0.5s ease-in-out;
@@ -968,13 +975,14 @@ button:hover, button:focus {
 }
 .ti-nav-top a {
   display: inline-block;
-  padding-top: 2px;
-  padding-bottom: 2px;
   color: #fff;
   font-size: 0.9rem;
 }
-.ti-nav-top a:hover, .ti-nav-top a:focus {
-  color: #f6f6f6;
+.ti-nav-top a:hover {
+  color: #c0e0ff;
+}
+.ti-nav-top a:focus {
+  color: #d4d4d4;
 }
 @media (max-width: 767px) {
   .ti-nav-top {
@@ -1024,7 +1032,7 @@ button:hover, button:focus {
 }
 @media (min-width: 1200px) {
   .ti-sidebar-left {
-    width: 205px;
+    width: 194px;
     max-width: 100%;
   }
 }
@@ -1058,14 +1066,17 @@ button:hover, button:focus {
   }
 }
 .ti-sidebar-left .ti-nav-menu {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
+}
+.ti-sidebar-left .ti-nav-menu > li.ti-nav-item {
+  margin: 10px 0;
 }
 .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a {
   position: relative;
   display: block;
-  padding: 10px 10px;
+  padding: 4px 10px;
   border-radius: 3px;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
@@ -1074,13 +1085,17 @@ button:hover, button:focus {
 }
 @media (min-width: 768px) {
   .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a:hover {
-    background: #e9e9e9;
+    color: #2b69a7;
+    background: rgba(43, 105, 167, 0.05);
+  }
+  .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a:focus {
+    background: rgba(43, 105, 167, 0.1);
   }
 }
 @media (max-width: 767px) {
   .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a {
     color: #fff;
-    padding: 15px 15px;
+    padding: 10px 20px;
     white-space: nowrap;
   }
   .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a:hover {
@@ -1089,13 +1104,18 @@ button:hover, button:focus {
 }
 .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a .icn {
   position: absolute;
-  right: 10px;
+  right: 20px;
   padding-top: 3px;
   font-weight: bold;
   -moz-transition: transform 0.4s ease-in-out;
   -ms-transition: transform 0.4s ease-in-out;
   -webkit-transition: transform 0.4s ease-in-out;
   transition: transform 0.4s ease-in-out;
+}
+@media (min-width: 768px) {
+  .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a .icn {
+    right: 5px;
+  }
 }
 .ti-sidebar-left .ti-nav-menu > li.ti-nav-item.active > a {
   font-weight: bold;
@@ -1150,6 +1170,9 @@ button:hover, button:focus {
     border-radius: 3px;
   }
 }
+.ti-sidebar-left .ti-nav-menu > li.ti-nav-item li.ti-nav-item {
+  margin: 3px 0;
+}
 @media (min-width: 768px) {
   .ti-sidebar-left .ti-nav-menu > li.ti-nav-item li.ti-nav-item > a {
     padding-top: 5px;
@@ -1192,7 +1215,7 @@ button:hover, button:focus {
 }
 @media (min-width: 1200px) {
   .ti-sidebar-right {
-    width: 205px;
+    width: 194px;
     max-width: 100%;
   }
 }

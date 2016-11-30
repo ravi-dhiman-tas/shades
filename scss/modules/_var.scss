@@ -226,21 +226,21 @@ $custom-container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1125px
+  xl: 1140px
 ) !default;
 @include _assert-ascending($custom-container-max-widths, "$custom-container-max-widths");
 
 $wrap-max-widths: (
 	md: 350px,
 	lg: 590px,
-	xl: 670px
+	xl: 720px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
 $sidebar-max-widths: (
 	md: 180px,
 	lg: 180px,
-	xl: 205px
+	xl: 194px
 ) !default;
 @include _assert-ascending($wrap-max-widths, "$wrap-max-widths");
 
@@ -626,7 +626,7 @@ $zindex-tooltip:           1070 !default;
 $navbar-border-radius:              $border-radius !default;
 $navbar-padding-x:                  $spacer !default;
 $navbar-padding-y:                  ($spacer / 2) !default;
-$navbar-shadow:                     0 2px 3px rgba(0,0,0,0.12) !default;
+$navbar-shadow:                     0 1px 2px 0 rgba(31, 54, 77, 0.25) !default;
 
 $navbar-brand-padding-y:            .25rem !default;
 

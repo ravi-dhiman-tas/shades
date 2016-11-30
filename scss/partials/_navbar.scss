@@ -7,8 +7,8 @@
 }
 
 .#{$cls-pre}-header-wrap {
-	height: 77px;
-	margin-bottom: $spacer;
+	height: 64px;
+	margin-bottom: ($spacer - 2);
 }
 
 .#{$cls-pre}-nav-wrap {
@@ -19,7 +19,6 @@
 .#{$cls-pre}-navbar {
 	display: block;
 	width: 100%;
-	padding: $navbar-padding-y 0;
 	@include clearfix();
 	@include media-breakpoint-up(md) {
 		position: absolute;
@@ -28,12 +27,9 @@
 		right: 0;
 		@include transition(top 0.5s ease-in-out);
 	}
-	@include media-breakpoint-down(sm) {
-		padding: 10px 0;
-	}
 
 	&.sticky {
-		top: 27px;
+		top: 20px;
 	}
 
 	.#{$cls-pre}-container {
@@ -47,12 +43,16 @@
 
 	.#{$cls-pre}-nav-logo {
 		position: relative;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		@include media-breakpoint-up(md) {
 			position: absolute;
 		}
 		@include media-breakpoint-down(sm) {
 			display: table-cell;
 			padding-left: 60px;
+			padding-top: 14px;
+			padding-bottom: 14px;
 			vertical-align: middle;
 		}
 
@@ -84,8 +84,8 @@
 			display: none;
 			position: absolute;
 			left: 0;
-			top: -12px;
-			bottom: -10px;
+			top: 0px;
+			bottom: 0px;
 			background: none;
 			background-image: none;
 			border: none;
@@ -130,7 +130,7 @@
 			}
 
 			&.open {
-				background: lighten($brand-primary, 50%);
+				background: rgba($brand-primary, 0.15);
 
 				.icon-bar {
 					&:nth-child(3) {
@@ -153,7 +153,7 @@
 
 	.#{$cls-pre}-nav-form-small {
 		position: absolute;
-		top: -12px;
+		top: 0px;
 		right: 0;
 		left: 100%;
 		padding: 13px 10px;
@@ -201,6 +201,8 @@
 		margin-right: auto;
 		padding-left: $spacer;
 		padding-right: $spacer;
+		padding-top: 5px;
+		padding-bottom: 5px;
 		@include make-wrap-max-widths();
 
 		> form {
@@ -219,7 +221,6 @@
 			position: absolute;
 			right: 0;
 			top: 0;
-			padding-top: 2px;
 		}
 
 		@include media-breakpoint-down(sm) {
@@ -249,21 +250,32 @@
 			i.fa {
 				color: $gray-text;
 			}
+			
+			> a {
+				display: block;
+				
+				@include media-breakpoint-up(md) {
+					padding-top: 12px;
+					padding-bottom: 12px;
+					padding-left: 11px;
+					padding-right: 21px;
+				}
 
-			@include media-breakpoint-up(md) {
-				padding-top: 5px;
-				padding-bottom: 5px;
-				padding-left: 9px;
-				padding-right: 10px;
+				@include media-breakpoint-down(sm) {
+					font-size: 1.2rem;
+					padding: 18px 10px;
+				}
+				
+				&:hover {
+					background-color: rgba($brand-primary, 0.05);
+				}
+
+				&:focus {
+					background-color: rgba($brand-primary, 0.15);
+				}
 			}
 
-			@include media-breakpoint-down(sm) {
-				font-size: 1.2rem;
-				padding-top: 8px;
-				padding-bottom: 5px;
-				padding-left: 10px;
-				padding-right: 10px;
-			}
+			
 
 			.#{$cls-pre}-icon, .#{$cls-pre}-hexagon {
 				display: inline-block;
@@ -292,14 +304,18 @@
 			.#{$cls-pre}-hexagon {
 				@include media-breakpoint-down(sm) {
 					position: absolute;
-					top: 2px;
+					top: 13px;
 					right: 12px;
 				}
 			}
 
 			&.profile {
-				padding-top: 0;
-				padding-bottom: 0;
+				> a {
+					padding-top: 7px;
+					padding-bottom: 7px;
+					padding-right: 8px;
+					padding-left: 8px;
+				}
 
 				@include media-breakpoint-down(sm) {
 					display: none;
@@ -319,7 +335,7 @@
 					background: none;
 					background-image: none;
 					border: none;
-					padding: 7px 5px;
+					padding: 18px 15px;
 
 					&:hover, &:focus {
 						outline: none;
@@ -327,19 +343,15 @@
 				}
 			}
 
-			.#{$cls-pre}-profile-widget {
 
-				> .#{$cls-pre}-profile-icon {
-					display: block;
-					padding-top: 0;
-					padding-bottom: 0;
-					border-radius: 50%;
-					border: none;
-					background: $gray-text;
-					width: 30px;
-					height: 30px;
-					overflow: hidden;
-				}
+			.#{$cls-pre}-profile-icon {
+				display: block;
+				border-radius: 50%;
+				border: none;
+				background: $gray-text;
+				width: 30px;
+				height: 30px;
+				overflow: hidden;
 			}
 		}
 
@@ -363,22 +375,26 @@
 
 .#{$cls-pre}-nav-top {
 	position: absolute;
-	top: 0;
+	top: 0px;
+	left: 0;
+	right: 0;
 	width: 100%;
-	background: $gray-dark;
+	background: #43484d;
 	text-align: center;
 	overflow: hidden;
 	@include transition(top 0.5s ease-in-out);
 
 	a {
 		display: inline-block;
-		padding-top: 2px;
-		padding-bottom: 2px;
 		color: #fff;
 		font-size: 0.9rem;
 
-		&:hover, &:focus {
-			color: $gray-light;
+		&:hover {
+			color: #c0e0ff;
+		}
+
+		&:focus {
+			color: #d4d4d4;
 		}
 	}
 
