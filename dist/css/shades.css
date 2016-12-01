@@ -44,7 +44,7 @@ a {
 }
 a:hover, a:focus {
   outline: none !important;
-  color: #1b436a;
+  color: #2b69a7;
   text-decoration: none !important;
 }
 
@@ -330,6 +330,10 @@ button:hover, button:focus {
   padding-left: 15px;
   padding-right: 15px;
 }
+.ti-container::before {
+  content: "";
+  display: table;
+}
 .ti-container::after {
   content: "";
   display: table;
@@ -363,6 +367,10 @@ button:hover, button:focus {
 .ti-card-wrap {
   margin-left: auto;
   margin-right: auto;
+}
+.ti-card-wrap::before {
+  content: "";
+  display: table;
 }
 .ti-card-wrap::after {
   content: "";
@@ -532,6 +540,10 @@ button:hover, button:focus {
 .ti-nav-wrap {
   position: relative;
 }
+.ti-nav-wrap::before {
+  content: "";
+  display: table;
+}
 .ti-nav-wrap::after {
   content: "";
   display: table;
@@ -541,6 +553,10 @@ button:hover, button:focus {
 .ti-navbar {
   display: block;
   width: 100%;
+}
+.ti-navbar::before {
+  content: "";
+  display: table;
 }
 .ti-navbar::after {
   content: "";
@@ -749,6 +765,10 @@ button:hover, button:focus {
     float: right;
   }
 }
+.ti-navbar .ti-nav-navigation::before {
+  content: "";
+  display: table;
+}
 .ti-navbar .ti-nav-navigation::after {
   content: "";
   display: table;
@@ -945,6 +965,43 @@ button:hover, button:focus {
   z-index: 1000;
 }
 
+.ti-nav-unauth {
+  display: table;
+  width: 100%;
+}
+.ti-nav-unauth .ti-nav-logo {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+@media (max-width: 767px) {
+  .ti-nav-unauth .ti-nav-logo {
+    padding-left: 15px;
+  }
+}
+.ti-nav-unauth .ti-nav-logout {
+  display: table-cell;
+  vertical-align: middle;
+  width: 50%;
+}
+.ti-nav-unauth .ti-nav-logout::before {
+  content: "";
+  display: table;
+}
+.ti-nav-unauth .ti-nav-logout::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (max-width: 767px) {
+  .ti-nav-unauth .ti-nav-logout {
+    padding-right: 15px;
+  }
+}
+.ti-nav-unauth .ti-nav-logout .ti-nav-links {
+  float: right;
+}
+
 @media (max-width: 767px) {
   .ti-logo-wrap {
     padding: 0;
@@ -972,6 +1029,10 @@ button:hover, button:focus {
   z-index: 900;
   position: fixed;
   overflow-y: auto;
+}
+.ti-sidebar-left::before {
+  content: "";
+  display: table;
 }
 .ti-sidebar-left::after {
   content: "";
@@ -1022,7 +1083,7 @@ button:hover, button:focus {
   position: relative;
   display: block;
   padding: 4px 10px;
-  border-radius: 3px;
+  border-radius: 2px;
   -moz-transition: all 0.2s ease-in-out;
   -ms-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1035,7 +1096,7 @@ button:hover, button:focus {
   }
   .ti-sidebar-left .ti-nav-menu > li.ti-nav-item > a:focus {
     color: #2b69a7;
-    background: rgba(43, 105, 167, 0.1);
+    background: rgba(67, 72, 77, 0.1);
   }
 }
 @media (max-width: 767px) {
@@ -1165,6 +1226,10 @@ button:hover, button:focus {
     max-width: 100%;
   }
 }
+.ti-sidebar-right::before {
+  content: "";
+  display: table;
+}
 .ti-sidebar-right::after {
   content: "";
   display: table;
@@ -1180,6 +1245,10 @@ button:hover, button:focus {
   width: 100%;
   margin-top: 15px;
   margin-bottom: 20px;
+}
+.ti-sidebar-right .ti-user-widget::before {
+  content: "";
+  display: table;
 }
 .ti-sidebar-right .ti-user-widget::after {
   content: "";
@@ -1465,6 +1534,39 @@ select.form-control:focus::-ms-value {
 
 .text-bottom .caption {
   top: 105%;
+}
+
+.ti-typeahead::before {
+  content: "";
+  display: table;
+}
+.ti-typeahead::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.ti-typeahead .ti-typeahead-body {
+  padding: 20px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.ti-typeahead .ti-typeahead-results {
+  display: table;
+  width: 100%;
+}
+.ti-typeahead .ti-typeahead-results > .image, .ti-typeahead .ti-typeahead-results > .text {
+  display: table-cell;
+  vertical-align: middle;
+}
+.ti-typeahead .opt {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 80%;
+}
+.ti-typeahead .muted {
+  color: #afafaf;
 }
 
 /*# sourceMappingURL=shades.css.map */

@@ -1,0 +1,32 @@
+.#{$cls-pre}-typeahead {
+	@include clearfix();
+
+	.#{$cls-pre}-typeahead-body {
+		padding: 20px;
+		background: $card-bg;
+		border-radius: $border-radius;
+		box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.20);
+		border: $card-border-width solid $card-border-color;
+	}
+
+	.#{$cls-pre}-typeahead-results {
+		display: table;
+		width: 100%;
+
+		> .image, > .text {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
+
+	.opt {
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		font-size: 80%;
+	}
+
+	.muted {
+		color: #afafaf;
+	}
+
+}

@@ -423,6 +423,35 @@
 	z-index: $zindex-navbar;
 }
 
+.#{$cls-pre}-nav-unauth {
+	display: table;
+	width: 100%;
+
+	.#{$cls-pre}-nav-logo {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+
+		@include media-breakpoint-down(sm) {
+			padding-left: 15px;
+		}
+	}
+	.#{$cls-pre}-nav-logout {
+		display: table-cell;
+		vertical-align: middle;
+		width: 50%;
+		@include clearfix();
+
+		@include media-breakpoint-down(sm) {
+			padding-right: 15px;
+		}
+
+		.#{$cls-pre}-nav-links {
+			float: right;
+		}
+	}
+}
+
 .#{$cls-pre}-logo-wrap {
 	@include media-breakpoint-down(sm) {
 		padding: 0;
