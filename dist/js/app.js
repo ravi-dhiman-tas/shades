@@ -47,9 +47,11 @@ $(function () {
 function stickyNavbar() {
 	var headTop = $(".ti-nav-top"),
 	    headMain = $(".ti-navbar"),
+		leftPanel = $(".ti-sidebar-left"),
+		footer = $("#id_footer_main"),
 		prevScroll = window.scrollY || 0;
 
-	if(headTop.length == 0 || headTop.length > 1 || headMain.length == 0 || headMain.length > 1) {
+	if(headTop.length == 0 || headTop.length > 1 || headMain.length == 0 || headMain.length > 1 || leftPanel.length == 0) {
 		return;
 	}
 
@@ -57,14 +59,26 @@ function stickyNavbar() {
 		return;
 	}
 
+	var footerHeight = footer.length != 0 ? footer.height() : 0;
+
+	var leftPanelPosition = leftPanel.position(),
+		lpTop = leftPanelPosition.top,
+		lpLeft = leftPanelPosition.left,
+		hOff = window.innerHeight - footerHeight - lpTop - 30;
+
+	leftPanel.css("width", (leftPanel.parent().width() + 20))
+		 .css("height", hOff);
+
 	$(window).scroll(function(event) {
 		var scrollY = window.scrollY || 0;
 		if(scrollY > prevScroll) {
 			headTop.css("top", (-headTop.height()));
 			headMain.css("top", "0px");
+			leftPanel.css("top", (lpTop - headTop.height()));
 		} else {
 			headTop.css("top", "0px");
 			headMain.css("top", headTop.height());
+			leftPanel.css("top", (lpTop));
 		}
 		prevScroll = scrollY;
 	});

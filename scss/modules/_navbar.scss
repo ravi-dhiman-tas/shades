@@ -1,69 +1,26 @@
 @mixin hexagon($bgc, $bgac, $w) {
 	position: absolute;
 	height: $w;
-	width: ($w/2) + 4;
+	width: $w;
 	border-radius: $border-radius;
-	background: $bgc;
 	font-size: 0.8rem;
 	color: #fff;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 1.70;
+	background-image: url("../../../beta/images/empty-notification-bg@2x.png");
+	background-position: center center;
+	background-size: $w $w;
+	background-repeat: no-repeat;
 
 	@include media-breakpoint-up(md) {
-		right: 14px;
+		right: 12px;
 		top: 12px;
-	}
-
-	@include media-breakpoint-down(sm) {
-		height: ($w - 5);
-		width: ($w/2) + 2;
-		line-height: 1.40;
-	}
-
-	&::before, &::after {
-		content: "";
-		position: absolute;
-		width: 0;
-		top: 0;
-		border-top: ($w/2) solid transparent;
-		border-bottom: ($w/2) solid transparent;
-		border-radius: $border-radius;
-
-		@include media-breakpoint-down(sm) {
-			border-top-width: ($w/2 - 2);
-			border-bottom-width: ($w/2 - 2);
-		}
-	}
-
-	&::before {
-		right: calc(100% - 1px);
-		border-right: ($w/4) solid $bgc;
-		@include media-breakpoint-down(sm) {
-			border-right-width: ($w/4 - 2);
-		}
-	}
-
-	&::after {
-		left: calc(100% - 1px);
-		width: 0;
-		border-left: ($w/4) solid $bgc;
-		@include media-breakpoint-down(sm) {
-			border-left-width: ($w/4 - 2);
-		}
 	}
 }
 
 @mixin hexagon-active($bgc) {
-	background: $bgc;
-
-	&::before {
-		border-right-color: $bgc;
-	}
-
-	&::after {
-		border-left-color: $bgc;
-	}
+	background-image: url("../../../beta/images/new-notification-bg@3x.png");
 }
 
 // For each breakpoint, define the maximum width of the container in a media query
