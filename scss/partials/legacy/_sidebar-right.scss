@@ -6,6 +6,7 @@
 	z-index: $zindex-navbar - 100;
 	padding-left: ($spacer - 5);
 	padding-right: ($spacer - 5);
+	@include borderbox();
 	@include make-sidebar-max-widths();
 	@include clearfix();
 	@include media-breakpoint-down(sm) {
@@ -17,16 +18,19 @@
 		width: 100%;
 		margin-top: $spacer;
 		margin-bottom: ($spacer + 5);
+		@include borderbox();
 
 		@include clearfix();
 
 		.#{$cls-pre}-user-image, .#{$cls-pre}-user-trust {
 			float: left;
 			vertical-align: middle;
+			@include borderbox();
 		}
 
 		.#{$cls-pre}-user-trust {
 			padding-left: $spacer;
+			@include borderbox();
 		}
 
 		.#{$cls-pre}-user-image {
@@ -34,15 +38,18 @@
 			@include border-radius(50%);
 			background: $gray-light;
 			overflow: hidden;
+			@include borderbox();
 
 			> img {
 				width: 100%;
 				height: 100%;
+				@include borderbox();
 			}
 		}
 
 		.#{$cls-pre}-user-trust {
 			width: 70%;
+			@include borderbox();
 		}
 	}
 
@@ -51,10 +58,12 @@
 			border: 1px solid rgba(255,255,255,0.3);
 			border-left-width: 0;
 			border-right-width: 0;
+			@include borderbox();
 		}
 	}
 }
 
 .#{$cls-pre}-user-overview {
 	padding-bottom: ($spacer * 2);
+	@include borderbox();
 }

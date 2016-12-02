@@ -1,6 +1,7 @@
 .#{$cls-pre}-card {
 	position: relative;
 	padding: $card-spacer;
+	@include borderbox();
 
 	@include media-breakpoint-up(sm) {
 		background: $card-bg;
@@ -15,6 +16,7 @@
 	margin-right: auto;
 	padding-left: $spacer;
 	padding-right: $spacer;
+	@include borderbox();
 	@include clearfix();
 	@include make-custom-container-max-widths();
 }
@@ -22,6 +24,7 @@
 .#{$cls-pre}-card-wrap {
 	margin-left: auto;
 	margin-right: auto;
+	@include borderbox();
 	@include clearfix();
 	@include make-wrap-max-widths();
 	@include media-breakpoint-up(md) {
@@ -34,8 +37,10 @@
 	position: relative;
 	padding-top: $card-spacer/2.5;
 	padding-bottom: $card-spacer/2.5;
+	@include borderbox();
 
 	.#{$cls-pre}-card {
+		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			border-bottom: $card-border-width solid $card-border-color;
 		}
@@ -43,6 +48,7 @@
 
 	&:last-child {
 		.#{$cls-pre}-card {
+			@include borderbox();
 			@include media-breakpoint-down(sm) {
 				border-bottom-width: 0;
 			}
@@ -54,6 +60,7 @@
 	position: relative;
 	padding-top: $card-spacer/2.5;
 	padding-bottom: $card-spacer/2.5;
+	@include borderbox();
 
 	@include media-breakpoint-up(sm) {
 		display: table;
@@ -105,6 +112,7 @@
 }
 
 .#{$cls-pre}-card-heading {
+	@include borderbox();
 	margin-top: 0;
 
 	&:last-child {
@@ -112,6 +120,7 @@
 	}
 
 	> a {
+		@include borderbox();
 		color: $body-color;
 	}
 }
@@ -123,12 +132,14 @@
 	overflow: hidden;
 	position: relative;
 	min-height: 100px;
+	@include borderbox();
 
 	&:last-child {
 		margin-bottom: 0;
 	}
 
 	> img {
+		@include borderbox();
 		width: 100%;
 	}
 
@@ -154,6 +165,7 @@
 			cursor: pointer;
 			@include translate(-50%, -50%);
 			@include transition(all 0.3s ease);
+			@include borderbox();
 
 			&:hover {
 				opacity: 1;

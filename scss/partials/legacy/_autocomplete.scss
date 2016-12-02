@@ -5,6 +5,7 @@
 	top: 100%;
 	width: 100%;
 	z-index: ($zindex-navbar + 10);
+	@include borderbox();
 	@include clearfix();
 
 	.#{$cls-pre}-typeahead-body {
@@ -13,6 +14,7 @@
 		border-radius: $border-radius;
 		box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.20);
 		border: $card-border-width solid $card-border-color;
+		@include borderbox();
 	}
 
 	.#{$cls-pre}-typeahead-results {
@@ -20,10 +22,12 @@
 		width: 100%;
 		padding-top: 7.5px;
 		padding-bottom: 7.5px;
+		@include borderbox();
 
 		> .image, > .text {
 			display: table-cell;
 			vertical-align: middle;
+			@include borderbox();
 		}
 
 		> .image {
@@ -44,6 +48,7 @@
 			text-overflow: ellipsis;
 			position: relative;
 			color: #43484d;
+			@include borderbox();
 
 			&:hover {
 				color: #43484d;
@@ -66,9 +71,11 @@
 		letter-spacing: 1px;
 		font-size: 80%;
 		font-weight: 600;
+		@include borderbox();
 	}
 
 	.muted {
 		color: #afafaf;
+		@include borderbox();
 	}
 }
