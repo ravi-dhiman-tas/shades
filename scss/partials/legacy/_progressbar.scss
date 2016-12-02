@@ -1,0 +1,45 @@
+.#{$cls-pre}-progressbar {
+	display: block;
+	position: relative;
+	width: 100%;
+	background: #fff;
+	border-radius: $border-radius;
+	height: 18px;
+	padding: 1px;
+	margin-top: ($spacer + 3);
+	margin-bottom: 2px;
+
+	.#{$cls-pre}-progress {
+		display: block;
+		height: 100%;
+		max-width: 100%;
+		min-width: 1px;
+		background: $gray;
+		border-radius: $border-radius;
+	}
+
+	.caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		display: block;
+	}
+}
+
+.#{$cls-pre}-progressbar-success {
+	.#{$cls-pre}-progress {
+		background: $brand-success;
+	}
+}
+
+.text-up {
+	.caption {
+		bottom: 105%;
+	}
+}
+
+.text-bottom {
+	.caption {
+		top: 105%;
+	}
+}

@@ -1,0 +1,49 @@
+* {
+	&::before, &::after {
+		@include borderbox();
+	}
+}
+
+html {
+	font-size: $font-size-base;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-size: $font-size-base;
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-shadow: none;
+
+	@include media-breakpoint-up(md) {
+		background: #f7f7f7;
+	}
+
+	@include media-breakpoint-down(sm) {
+		background: #fff;
+	}
+}
+
+img {
+	vertical-align: middle;
+	max-width: 100%;
+}
+
+a {
+	color: $brand-primary;
+	text-decoration: $link-decoration;
+
+	&:hover, &:focus {
+		outline: none !important;
+		color: $brand-primary;
+		text-decoration: none !important;
+	}
+}
+
+button {
+	&:hover, &:focus {
+		outline: none;
+	}
+}

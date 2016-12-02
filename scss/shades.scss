@@ -18,3 +18,16 @@
 // @import "util/opacity";
 // @import "util/padding";
 // @import "util/margin";
+
+// legacy css
+@import "partials/legacy/base";
+@import "partials/legacy/button";
+@import "partials/legacy/card";
+@import "partials/legacy/navbar";
+@import "partials/legacy/sidebar-left";
+@import "partials/legacy/sidebar-right";
+@import "partials/legacy/input-group";
+@import "partials/legacy/form";
+@import "partials/legacy/dropdown";
+@import "partials/legacy/progressbar";
+@import "partials/legacy/autocomplete";
