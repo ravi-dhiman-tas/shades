@@ -1,8 +1,14 @@
 .#{$cls-pre}-typeahead {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	width: 100%;
+	z-index: ($zindex-navbar + 10);
 	@include clearfix();
 
 	.#{$cls-pre}-typeahead-body {
-		padding: 20px;
+		padding: 20px 30px;
 		background: $card-bg;
 		border-radius: $border-radius;
 		box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.20);
@@ -12,10 +18,46 @@
 	.#{$cls-pre}-typeahead-results {
 		display: table;
 		width: 100%;
+		padding-top: 7.5px;
+		padding-bottom: 7.5px;
 
 		> .image, > .text {
 			display: table-cell;
 			vertical-align: middle;
+		}
+
+		> .image {
+			width: 44px;
+			height: 44px;
+			border-radius: 4px;
+			overflow: hidden;
+			position: relative;
+
+			> img {
+				width: 100%;
+			}
+		}
+
+		> .text {
+			padding-left: 10px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			position: relative;
+			color: #43484d;
+
+			&:hover {
+				color: #43484d;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				width: 10px;
+
+			}
 		}
 	}
 
@@ -23,10 +65,10 @@
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		font-size: 80%;
+		font-weight: 600;
 	}
 
 	.muted {
 		color: #afafaf;
 	}
-
 }

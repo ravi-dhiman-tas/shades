@@ -1536,6 +1536,14 @@ select.form-control:focus::-ms-value {
   top: 105%;
 }
 
+.ti-typeahead {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 1010;
+}
 .ti-typeahead::before {
   content: "";
   display: table;
@@ -1546,7 +1554,7 @@ select.form-control:focus::-ms-value {
   clear: both;
 }
 .ti-typeahead .ti-typeahead-body {
-  padding: 20px;
+  padding: 20px 30px;
   background: #fff;
   border-radius: 3px;
   box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.2);
@@ -1555,15 +1563,46 @@ select.form-control:focus::-ms-value {
 .ti-typeahead .ti-typeahead-results {
   display: table;
   width: 100%;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
 }
 .ti-typeahead .ti-typeahead-results > .image, .ti-typeahead .ti-typeahead-results > .text {
   display: table-cell;
   vertical-align: middle;
 }
+.ti-typeahead .ti-typeahead-results > .image {
+  width: 44px;
+  height: 44px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.ti-typeahead .ti-typeahead-results > .image > img {
+  width: 100%;
+}
+.ti-typeahead .ti-typeahead-results > .text {
+  padding-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+  color: #43484d;
+}
+.ti-typeahead .ti-typeahead-results > .text:hover {
+  color: #43484d;
+}
+.ti-typeahead .ti-typeahead-results > .text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 10px;
+}
 .ti-typeahead .opt {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 80%;
+  font-weight: 600;
 }
 .ti-typeahead .muted {
   color: #afafaf;
