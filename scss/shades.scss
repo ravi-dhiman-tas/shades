@@ -13,14 +13,17 @@
 // @import "partials/dropdown";
 // @import "partials/progressbar";
 // @import "partials/autocomplete";
-//
+
 // // utilities
 // @import "util/opacity";
 // @import "util/padding";
 // @import "util/margin";
 
-// legacy css
+// legacy partials
 @import "partials/legacy/base";
+@import "partials/legacy/grid";
+@import "partials/legacy/responsive";
+@import "partials/legacy/dropdowns";
 @import "partials/legacy/button";
 @import "partials/legacy/card";
 @import "partials/legacy/navbar";

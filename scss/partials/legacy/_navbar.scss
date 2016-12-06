@@ -2,9 +2,8 @@
 	- main navbar
 */
 
-.container {
+.#{$cls-pre}-container {
 	position: relative;
-	@include borderbox();
 }
 
 .#{$cls-pre}-header-wrap {
@@ -37,7 +36,7 @@
 		top: 20px;
 	}
 
-	.container {
+	.#{$cls-pre}-container {
 		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			padding-left: 0px;
@@ -46,7 +45,7 @@
 		}
 	}
 
-	.row {
+	.#{$cls-pre}-row {
 		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			display: table;

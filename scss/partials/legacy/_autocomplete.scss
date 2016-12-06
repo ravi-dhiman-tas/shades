@@ -15,6 +15,13 @@
 		box-shadow: 0 9px 24px 0 rgba(0, 0, 0, 0.20);
 		border: $card-border-width solid $card-border-color;
 		@include borderbox();
+		@include media-breakpoint-down(sm) {
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			top: 60px;
+		}
 	}
 
 	.#{$cls-pre}-typeahead-results {
