@@ -3,6 +3,7 @@
 	width: 100%;
 	display: table;
 	border-collapse: separate;
+	@include borderbox();
 
 	.#{$cls-pre}-form-control {
 		position: relative;
@@ -10,12 +11,15 @@
 		float: left;
 		width: 100%;
 		margin-bottom: 0;
+		@include borderbox();
 	}
 
 	&.search-icon {
+		@include borderbox();
 		.#{$cls-pre}-form-control {
 			padding-left: ($spacer*2);
 			@include border-left-radius($border-radius !important);
+			@include borderbox();
 		}
 	}
 }
@@ -24,6 +28,7 @@
 .#{$cls-pre}-input-group-addon,
 .#{$cls-pre}-input-group-btn {
 	display: table-cell;
+	@include borderbox();
 
 	&:not(:first-child):not(:last-child) {
 		@include border-radius(0);
@@ -38,6 +43,7 @@
 	padding-top: $input-padding-y;
 	z-index: $zindex-navbar;
 	color: $gray-text;
+	@include borderbox();
 }
 
 .#{$cls-pre}-input-group-addon,
@@ -45,6 +51,7 @@
 	width: 1%;
 	white-space: nowrap;
 	vertical-align: middle;
+	@include borderbox();
 }
 
 .#{$cls-pre}-input-group-lg > .#{$cls-pre}-form-control,
@@ -70,22 +77,26 @@
 	background-color: $input-group-addon-bg;
 	border: $input-btn-border-width solid $input-group-addon-border-color;
 	@include border-radius($input-border-radius);
+	@include borderbox();
 
 	&.#{$cls-pre}-form-control-sm {
 		padding: $input-padding-y-sm $input-padding-x-sm;
 		font-size: $font-size-sm;
 		@include border-radius($input-border-radius-sm);
+		@include borderbox();
 	}
 
 	&.#{$cls-pre}-form-control-lg {
 		padding: $input-padding-y-lg $input-padding-x-lg;
 		font-size: $font-size-lg;
 		@include border-radius($input-border-radius-lg);
+		@include borderbox();
 	}
 
 	input[type="checkbox"],
 	input[type="radio"] {
 		margin-top: 0;
+		@include borderbox();
 	}
 }
 
@@ -97,6 +108,7 @@
 .#{$cls-pre}-input-group-btn:not(:last-child) > .#{$cls-pre}-btn-group > .#{$cls-pre}-btn,
 .#{$cls-pre}-input-group-btn:not(:last-child) > .#{$cls-pre}-dropdown-toggle {
 	@include border-right-radius(0);
+	@include borderbox();
 }
 
 .#{$cls-pre}-input-group-addon:not(:last-child) {
@@ -125,25 +137,30 @@
 	position: relative;
 	font-size: 0;
 	white-space: nowrap;
+	@include borderbox();
 
 	> .#{$cls-pre}-btn {
 		position: relative;
+		@include borderbox();
 
 		&.sbtn {
 			box-shadow: none !important;
 			padding: 6px 1.4rem !important;
 			text-transform: capitalize !important;
+			@include borderbox();
 		}
 
 		+ .#{$cls-pre}-btn {
 			margin-left: (-$input-btn-border-width);
+			@include borderbox();
 		}
 	}
 
 	&:not(:last-child) {
-		 > .#{$cls-pre}-btn-group,
+		> .#{$cls-pre}-btn-group,
 		> .#{$cls-pre}-btn {
 			margin-right: (-$input-btn-border-width);
+			@include borderbox();
 		}
 	}
 
@@ -152,6 +169,7 @@
 		> .#{$cls-pre}-btn {
 			z-index: 2;
 			margin-left: (-$input-btn-border-width);
+			@include borderbox();
 		}
 	}
 }

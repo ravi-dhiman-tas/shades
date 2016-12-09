@@ -1,0 +1,55 @@
+.#{$cls-pre}-sidebar-right {
+	background: none;
+	position: relative;
+	z-index: $zindex-navbar - 100;
+	@include borderbox();
+	@include clearfix();
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+
+	.#{$cls-pre}-user-widget {
+		display: table;
+		width: 100%;
+		margin-top: $spacer;
+		margin-bottom: ($spacer + 5);
+		@include borderbox();
+
+		@include clearfix();
+
+		.#{$cls-pre}-user-image, .#{$cls-pre}-user-trust {
+			display: table-cell;
+			vertical-align: middle;
+			@include borderbox();
+		}
+
+		.#{$cls-pre}-user-image {
+			background: $gray-light;
+			@include borderbox();
+
+			img {
+				background-color: #FFF;
+				border: 1px solid #DDD;
+				border-radius: 3px;
+				padding: 3px;
+				width: 30px;
+				height: 30px;
+				@include borderbox();
+			}
+		}
+	}
+
+	.divider {
+		@include media-breakpoint-down(sm) {
+			border: 1px solid rgba(255,255,255,0.3);
+			border-left-width: 0;
+			border-right-width: 0;
+			@include borderbox();
+		}
+	}
+}
+
+.#{$cls-pre}-user-overview {
+	padding-bottom: ($spacer * 2);
+	@include borderbox();
+}

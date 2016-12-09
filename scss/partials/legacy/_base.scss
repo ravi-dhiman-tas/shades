@@ -1,6 +1,4 @@
 * {
-	@include borderbox();
-
 	&::before, &::after {
 		@include borderbox();
 	}

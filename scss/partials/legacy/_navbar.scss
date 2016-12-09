@@ -2,23 +2,26 @@
 	- main navbar
 */
 
-.container {
+.#{$cls-pre}-container {
 	position: relative;
 }
 
 .#{$cls-pre}-header-wrap {
 	height: 64px;
 	margin-bottom: ($spacer - 2);
+	@include borderbox();
 }
 
 .#{$cls-pre}-nav-wrap {
 	position: relative;
+	@include borderbox();
 	@include clearfix();
 }
 
 .#{$cls-pre}-navbar {
 	display: block;
 	width: 100%;
+	@include borderbox();
 	@include clearfix();
 	@include media-breakpoint-up(md) {
 		position: absolute;
@@ -29,10 +32,12 @@
 	}
 
 	&.sticky {
+		@include borderbox();
 		top: 19px;
 	}
 
-	.container {
+	.#{$cls-pre}-container {
+		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			padding-left: 0px;
 			padding-right: 0px;
@@ -40,7 +45,8 @@
 		}
 	}
 
-	.row {
+	.#{$cls-pre}-row {
+		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			display: table;
 			width: 100%;
@@ -50,6 +56,7 @@
 	}
 
 	.#{$cls-pre}-nav-logo {
+		@include borderbox();
 		position: relative;
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -64,6 +71,7 @@
 		}
 
 		&.auth {
+			@include borderbox();
 			position: relative;
 			@include media-breakpoint-up(md) {
 				display: table-cell;
@@ -76,12 +84,14 @@
 		}
 
 		.#{$cls-pre}-logo-blue {
+			@include borderbox();
 			@include media-breakpoint-down(sm) {
 				display: none;
 			}
 		}
 
 		.#{$cls-pre}-logo-black {
+			@include borderbox();
 			@include media-breakpoint-up(md) {
 				display: none;
 			}
@@ -100,6 +110,7 @@
 			-ms-touch-action: manipulation;
 			touch-action: manipulation;
 			cursor: pointer;
+			@include borderbox();
 
 			&:hover, &:focus {
 				outline: none;
@@ -115,31 +126,38 @@
 				height: 2px;
 				border-radius: 4px;
 				background: $brand-primary;
+				@include borderbox();
 				@include transition(transform 0.4s ease-in-out);
 
 				+ .icon-bar {
+					@include borderbox();
 					margin-top: 4px;
 				}
 
 				&:nth-child(3) {
+					@include borderbox();
 					@include translate(0px, 0px);
 				}
 
 				&:nth-child(2) {
+					@include borderbox();
 					transform: translate(0px, 0px) rotate(0deg);
 					transform-origin: left center;
 				}
 
 				&:nth-child(4) {
+					@include borderbox();
 					transform: translate(0px, 0px) rotate(0deg);
 					transform-origin: left center;
 				}
 			}
 
 			&.open {
+				@include borderbox();
 				background: rgba($brand-primary, 0.15);
 
 				.icon-bar {
+					@include borderbox();
 					&:nth-child(3) {
 						@include translate(-50px, 0px);
 					}
@@ -167,6 +185,7 @@
 		background: #fff;
 		max-width: 0%;
 		overflow: hidden;
+		@include borderbox();
 		@include transition(all 0.3s ease-in-out);
 
 		@include media-breakpoint-up(md) {
@@ -174,6 +193,7 @@
 		}
 
 		&.open {
+			@include borderbox();
 			@include media-breakpoint-down(sm) {
 				max-width: 100%;
 				left: 0;
@@ -181,16 +201,19 @@
 		}
 
 		> form {
+			@include borderbox();
 			margin-left: 37px;
 			white-space: nowrap;
 
 			.#{$cls-pre}-form-control {
+				@include borderbox();
 				border: none;
 				font-size: 1.2rem;
 			}
 		}
 
 		.#{$cls-pre}-navbar-back {
+			@include borderbox();
 			position: absolute;
 			left: 7px;
 			background: none;
@@ -203,6 +226,7 @@
 	}
 
 	.#{$cls-pre}-nav-form {
+		@include borderbox();
 		position: relative;
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -210,6 +234,7 @@
 		max-width: 100%;
 
 		> form {
+			@include borderbox();
 			display: block;
 			margin: 0;
 			padding: 0;
@@ -221,6 +246,7 @@
 	}
 
 	.#{$cls-pre}-nav-navigation {
+		@include borderbox();
 		@include media-breakpoint-down(sm) {
 			display: table-cell;
 			vertical-align: middle;
@@ -230,6 +256,7 @@
 		@include clearfix();
 
 		&.auth {
+			@include borderbox();
 			position: relative;
 			@include media-breakpoint-up(md) {
 				display: table-cell;
@@ -240,16 +267,19 @@
 		}
 
 		.#{$cls-pre}-nav-links {
+			@include borderbox();
 			float: right;
 			position: relative;
 			color: $gray-text;
 			vertical-align: middle;
 
 			i.fa {
+				@include borderbox();
 				color: $gray-text;
 			}
 
 			> a {
+				@include borderbox();
 				display: block;
 
 				@include media-breakpoint-up(md) {
@@ -276,30 +306,37 @@
 
 
 			.#{$cls-pre}-icon, .#{$cls-pre}-hexagon {
+				@include borderbox();
 				display: inline-block;
 			}
 
 			.#{$cls-pre}-icon {
+				@include borderbox();
 				margin-right: 5px;
 			}
 
 			&.active {
+				@include borderbox();
 				color: $brand-primary;
 
 				> a {
+					@include borderbox();
 					color: $brand-primary;
 				}
 
 				i.fa {
+					@include borderbox();
 					color: $brand-primary;
 				}
 
 				.#{$cls-pre}-hexagon {
+					@include borderbox();
 					@include hexagon-active($brand-orange);
 				}
 			}
 
 			.#{$cls-pre}-hexagon {
+				@include borderbox();
 				@include media-breakpoint-down(sm) {
 					position: absolute;
 					top: 13px;
@@ -308,7 +345,9 @@
 			}
 
 			&.profile {
+				@include borderbox();
 				> a {
+					@include borderbox();
 					padding-top: 7px;
 					padding-bottom: 7px;
 					padding-right: 8px;
@@ -321,6 +360,7 @@
 			}
 
 			&.search-btn {
+				@include borderbox();
 				padding-top: 0;
 				padding-bottom: 0;
 				display: none;
@@ -330,12 +370,14 @@
 				}
 
 				.ti-navbar-search {
+					@include borderbox();
 					background: none;
 					background-image: none;
 					border: none;
 					padding: 18px 15px;
 
 					&:hover, &:focus {
+						@include borderbox();
 						outline: none;
 					}
 				}
@@ -343,6 +385,7 @@
 
 
 			.#{$cls-pre}-profile-icon {
+				@include borderbox();
 				display: block;
 				border-radius: 50%;
 				border: none;
@@ -354,12 +397,15 @@
 		}
 
 		.#{$cls-pre}-hexagon {
+			@include borderbox();
 			@include hexagon(lighten($gray-text, 20%), $brand-primary, 20px);
 		}
 	}
 
 	.dropdown-menu {
+		@include borderbox();
 		li > a {
+			@include borderbox();
 			padding-top: 6px;
 			padding-bottom: 6px;
 		}
@@ -367,11 +413,13 @@
 }
 
 .#{$cls-pre}-navbar-main {
+	@include borderbox();
 	background: #fff;
 	box-shadow: $navbar-shadow;
 }
 
 .#{$cls-pre}-nav-top {
+	@include borderbox();
 	position: absolute;
 	top: 0px;
 	left: 0;
@@ -383,6 +431,7 @@
 	@include transition(top 0.5s ease-in-out);
 
 	a {
+		@include borderbox();
 		display: inline-block;
 		color: #fff;
 		font-size: 0.9rem;
@@ -405,32 +454,38 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	@include borderbox();
 }
 
 .#{$cls-pre}-fixed-bottom, .#{$cls-pre}-absolute-bottom {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	@include borderbox();
 }
 
 .#{$cls-pre}-fixed-top, .#{$cls-pre}-fixed-bottom {
 	position: fixed;
 	z-index: $zindex-navbar-fixed;
+	@include borderbox();
 }
 
 .#{$cls-pre}-absolute-top, .#{$cls-pre}-absolute-bottom {
 	position: absolute;
 	z-index: $zindex-navbar;
+	@include borderbox();
 }
 
 .#{$cls-pre}-nav-unauth {
 	display: table;
 	width: 100%;
+	@include borderbox();
 
 	.#{$cls-pre}-nav-logo {
 		display: table-cell;
 		vertical-align: middle;
 		width: 50%;
+		@include borderbox();
 
 		@include media-breakpoint-down(sm) {
 			padding-left: 15px;
@@ -440,6 +495,7 @@
 		display: table-cell;
 		vertical-align: middle;
 		width: 50%;
+		@include borderbox();
 		@include clearfix();
 
 		@include media-breakpoint-down(sm) {
@@ -448,11 +504,13 @@
 
 		.#{$cls-pre}-nav-links {
 			float: right;
+			@include borderbox();
 		}
 	}
 }
 
 .#{$cls-pre}-logo-wrap {
+	@include borderbox();
 	@include media-breakpoint-down(sm) {
 		padding: 0;
 		display: table-cell;
@@ -461,12 +519,14 @@
 }
 
 .#{$cls-pre}-nav-form-wrap {
+	@include borderbox();
 	@include media-breakpoint-down(sm) {
 		display: none;
 	}
 }
 
 .#{$cls-pre}-navigation-wrap {
+	@include borderbox();
 	@include media-breakpoint-down(sm) {
 		padding: 0;
 		display: table-cell;

@@ -1,0 +1,56 @@
+.#{$cls-pre}-sidebar-right {
+	background: none;
+	position: relative;
+	z-index: $zindex-navbar - 100;
+	@include borderbox();
+	@include clearfix();
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+
+	.#{$cls-pre}-user-widget {
+		display: table;
+		width: 100%;
+		margin-top: $spacer;
+		margin-bottom: ($spacer + 5);
+
+		@include clearfix();
+
+		.#{$cls-pre}-user-image, .#{$cls-pre}-user-trust {
+			float: left;
+			vertical-align: middle;
+		}
+
+		.#{$cls-pre}-user-trust {
+			padding-left: $spacer;
+		}
+
+		.#{$cls-pre}-user-image {
+			width: 30%;
+			@include border-radius(50%);
+			background: $gray-light;
+			overflow: hidden;
+
+			> img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.#{$cls-pre}-user-trust {
+			width: 70%;
+		}
+	}
+
+	.divider {
+		@include media-breakpoint-down(sm) {
+			border: 1px solid rgba(255,255,255,0.3);
+			border-left-width: 0;
+			border-right-width: 0;
+		}
+	}
+}
+
+.#{$cls-pre}-user-overview {
+	padding-bottom: ($spacer * 2);
+}

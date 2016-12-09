@@ -1,0 +1,24 @@
+@mixin make-spacing($spacing, $max-range, $step) {
+	$i: 0;
+
+	@while( $i <= $max-range ) {
+		.top#{$spacing}-#{$i} {
+			#{$spacing}-top: $i;
+		}
+		.right#{$spacing}-#{$i} {
+			#{$spacing}-right: $i;
+		}
+		.bottom#{$spacing}-#{$i} {
+			#{$spacing}-bottom: $i;
+		}
+		.left#{$spacing}-#{$i} {
+			#{$spacing}-left: $i;
+		}
+
+		$i: $i + $step;
+	}
+
+	.no#{$spacing} {
+		#{$spacing}: 0;
+	}
+}
