@@ -1,7 +1,8 @@
 .#{$cls-pre}-card {
 	position: relative;
-	padding: $card-spacer;
+	padding: ($card-spacer + 5);
 	@include borderbox();
+	@include clearfix();
 
 	@include media-breakpoint-up(sm) {
 		background: $card-bg;
@@ -11,14 +12,40 @@
 	}
 }
 
+.#{$cls-pre}-card-panel {
+	position: relative;
+	padding: ($card-spacer + 5);
+
+	@include media-breakpoint-up(sm) {
+		background: $card-bg;
+		box-shadow: $card-box-shadow;
+	}
+
+	.#{$cls-pre}-card-panel-head {
+		padding-left: ($card-spacer + 5);
+		padding-right: ($card-spacer + 5);
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: #fff;
+		border-radius: $border-radius $border-radius 0 0;
+		border: $card-border-width solid $card-border-color;
+		border-bottom-width: 0;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 !important;
+		}
+	}
+
+	.#{$cls-pre}-card-panel-body {
+		padding: ($card-spacer + 5);
+		border-radius: 0 0 $border-radius $border-radius;
+		border: $card-border-width solid $card-border-color;
+		border-top-width: 0;
+	}
+}
+
 .#{$cls-pre}-container {
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: $spacer;
-	padding-right: $spacer;
 	@include borderbox();
-	@include clearfix();
-	@include make-custom-container-max-widths();
 }
 
 .#{$cls-pre}-card-wrap {
@@ -177,4 +204,58 @@
 		margin-left: -$card-spacer;
 		margin-right: -$card-spacer;
 	}
+}
+
+
+.#{$cls-pre}-article-share {
+	display: inline-block;
+	color: #8b8b8b;
+
+	@include media-breakpoint-up(xl) {
+		padding-right: 25px;
+
+		&:not(:first-child) {
+			padding-left: 25px;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			border-width: 0px 1px 0px 1px;
+		}
+
+		&:last-child {
+			border-width: 0;
+			padding-right: 0;
+		}
+	}
+
+	@include media-breakpoint-between(sm, lg) {
+		padding-right: 15px;
+
+		&:not(:first-child) {
+			padding-left: 15px;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			border-width: 0px 1px 0px 1px;
+		}
+
+		&:last-child {
+			border-width: 0;
+			padding-right: 0;
+		}
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding-right: 10px;
+
+		&:not(:first-child) {
+			padding-left: 10px;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			border-width: 0px 1px 0px 1px;
+		}
+
+		&:last-child {
+			border-width: 0;
+			padding-right: 0;
+		}
+	}
+
+
+	@include borderbox();
 }

@@ -1,12 +1,43 @@
 .#{$cls-pre}-card {
 	position: relative;
-	padding: $card-spacer;
+	padding: ($card-spacer + 5);
 
 	@include media-breakpoint-up(sm) {
 		background: $card-bg;
 		border-radius: $border-radius;
 		box-shadow: $card-box-shadow;
 		border: $card-border-width solid $card-border-color;
+	}
+}
+
+.#{$cls-pre}-card-panel {
+	position: relative;
+
+	@include media-breakpoint-up(sm) {
+		background: $card-bg;
+		box-shadow: $card-box-shadow;
+	}
+
+	.#{$cls-pre}-card-panel-head {
+		padding-left: ($card-spacer + 5);
+		padding-right: ($card-spacer + 5);
+		padding-top: 5px;
+		padding-bottom: 5px;
+		color: #fff;
+		border-radius: $border-radius $border-radius 0 0;
+		border: $card-border-width solid $card-border-color;
+		border-bottom-width: 0;
+
+		h1, h2, h3, h4, h5, h6 {
+			margin: 0 !important;
+		}
+	}
+
+	.#{$cls-pre}-card-panel-body {
+		padding: ($card-spacer + 5);
+		border-radius: 0 0 $border-radius $border-radius;
+		border: $card-border-width solid $card-border-color;
+		border-top-width: 0;
 	}
 }
 

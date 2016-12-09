@@ -1,12 +1,8 @@
 .#{$cls-pre}-sidebar-right {
 	background: none;
-	position: absolute;
-	top: 0;
-	right: 0;
+	position: relative;
 	z-index: $zindex-navbar - 100;
-	padding-left: ($spacer - 5);
-	padding-right: ($spacer - 5);
-	@include make-sidebar-max-widths();
+	@include borderbox();
 	@include clearfix();
 	@include media-breakpoint-down(sm) {
 		display: none;

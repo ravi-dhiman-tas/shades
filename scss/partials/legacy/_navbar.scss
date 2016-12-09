@@ -33,7 +33,7 @@
 
 	&.sticky {
 		@include borderbox();
-		top: 20px;
+		top: 19px;
 	}
 
 	.#{$cls-pre}-container {
