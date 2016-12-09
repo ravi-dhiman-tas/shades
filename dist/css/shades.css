@@ -1638,660 +1638,673 @@ select.form-control:focus::-ms-value {
   color: #afafaf;
 }
 
+.ti-label {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: .25em;
+}
+
 .toppadding-0 {
-  padding-top: 0;
+  padding-top: 0px;
 }
 
 .rightpadding-0 {
-  padding-right: 0;
+  padding-right: 0px;
 }
 
 .bottompadding-0 {
-  padding-bottom: 0;
+  padding-bottom: 0px;
 }
 
 .leftpadding-0 {
-  padding-left: 0;
+  padding-left: 0px;
 }
 
 .toppadding-5 {
-  padding-top: 5;
+  padding-top: 5px;
 }
 
 .rightpadding-5 {
-  padding-right: 5;
+  padding-right: 5px;
 }
 
 .bottompadding-5 {
-  padding-bottom: 5;
+  padding-bottom: 5px;
 }
 
 .leftpadding-5 {
-  padding-left: 5;
+  padding-left: 5px;
 }
 
 .toppadding-10 {
-  padding-top: 10;
+  padding-top: 10px;
 }
 
 .rightpadding-10 {
-  padding-right: 10;
+  padding-right: 10px;
 }
 
 .bottompadding-10 {
-  padding-bottom: 10;
+  padding-bottom: 10px;
 }
 
 .leftpadding-10 {
-  padding-left: 10;
+  padding-left: 10px;
 }
 
 .toppadding-15 {
-  padding-top: 15;
+  padding-top: 15px;
 }
 
 .rightpadding-15 {
-  padding-right: 15;
+  padding-right: 15px;
 }
 
 .bottompadding-15 {
-  padding-bottom: 15;
+  padding-bottom: 15px;
 }
 
 .leftpadding-15 {
-  padding-left: 15;
+  padding-left: 15px;
 }
 
 .toppadding-20 {
-  padding-top: 20;
+  padding-top: 20px;
 }
 
 .rightpadding-20 {
-  padding-right: 20;
+  padding-right: 20px;
 }
 
 .bottompadding-20 {
-  padding-bottom: 20;
+  padding-bottom: 20px;
 }
 
 .leftpadding-20 {
-  padding-left: 20;
+  padding-left: 20px;
 }
 
 .toppadding-25 {
-  padding-top: 25;
+  padding-top: 25px;
 }
 
 .rightpadding-25 {
-  padding-right: 25;
+  padding-right: 25px;
 }
 
 .bottompadding-25 {
-  padding-bottom: 25;
+  padding-bottom: 25px;
 }
 
 .leftpadding-25 {
-  padding-left: 25;
+  padding-left: 25px;
 }
 
 .toppadding-30 {
-  padding-top: 30;
+  padding-top: 30px;
 }
 
 .rightpadding-30 {
-  padding-right: 30;
+  padding-right: 30px;
 }
 
 .bottompadding-30 {
-  padding-bottom: 30;
+  padding-bottom: 30px;
 }
 
 .leftpadding-30 {
-  padding-left: 30;
+  padding-left: 30px;
 }
 
 .toppadding-35 {
-  padding-top: 35;
+  padding-top: 35px;
 }
 
 .rightpadding-35 {
-  padding-right: 35;
+  padding-right: 35px;
 }
 
 .bottompadding-35 {
-  padding-bottom: 35;
+  padding-bottom: 35px;
 }
 
 .leftpadding-35 {
-  padding-left: 35;
+  padding-left: 35px;
 }
 
 .toppadding-40 {
-  padding-top: 40;
+  padding-top: 40px;
 }
 
 .rightpadding-40 {
-  padding-right: 40;
+  padding-right: 40px;
 }
 
 .bottompadding-40 {
-  padding-bottom: 40;
+  padding-bottom: 40px;
 }
 
 .leftpadding-40 {
-  padding-left: 40;
+  padding-left: 40px;
 }
 
 .toppadding-45 {
-  padding-top: 45;
+  padding-top: 45px;
 }
 
 .rightpadding-45 {
-  padding-right: 45;
+  padding-right: 45px;
 }
 
 .bottompadding-45 {
-  padding-bottom: 45;
+  padding-bottom: 45px;
 }
 
 .leftpadding-45 {
-  padding-left: 45;
+  padding-left: 45px;
 }
 
 .toppadding-50 {
-  padding-top: 50;
+  padding-top: 50px;
 }
 
 .rightpadding-50 {
-  padding-right: 50;
+  padding-right: 50px;
 }
 
 .bottompadding-50 {
-  padding-bottom: 50;
+  padding-bottom: 50px;
 }
 
 .leftpadding-50 {
-  padding-left: 50;
+  padding-left: 50px;
 }
 
 .toppadding-55 {
-  padding-top: 55;
+  padding-top: 55px;
 }
 
 .rightpadding-55 {
-  padding-right: 55;
+  padding-right: 55px;
 }
 
 .bottompadding-55 {
-  padding-bottom: 55;
+  padding-bottom: 55px;
 }
 
 .leftpadding-55 {
-  padding-left: 55;
+  padding-left: 55px;
 }
 
 .toppadding-60 {
-  padding-top: 60;
+  padding-top: 60px;
 }
 
 .rightpadding-60 {
-  padding-right: 60;
+  padding-right: 60px;
 }
 
 .bottompadding-60 {
-  padding-bottom: 60;
+  padding-bottom: 60px;
 }
 
 .leftpadding-60 {
-  padding-left: 60;
+  padding-left: 60px;
 }
 
 .toppadding-65 {
-  padding-top: 65;
+  padding-top: 65px;
 }
 
 .rightpadding-65 {
-  padding-right: 65;
+  padding-right: 65px;
 }
 
 .bottompadding-65 {
-  padding-bottom: 65;
+  padding-bottom: 65px;
 }
 
 .leftpadding-65 {
-  padding-left: 65;
+  padding-left: 65px;
 }
 
 .toppadding-70 {
-  padding-top: 70;
+  padding-top: 70px;
 }
 
 .rightpadding-70 {
-  padding-right: 70;
+  padding-right: 70px;
 }
 
 .bottompadding-70 {
-  padding-bottom: 70;
+  padding-bottom: 70px;
 }
 
 .leftpadding-70 {
-  padding-left: 70;
+  padding-left: 70px;
 }
 
 .toppadding-75 {
-  padding-top: 75;
+  padding-top: 75px;
 }
 
 .rightpadding-75 {
-  padding-right: 75;
+  padding-right: 75px;
 }
 
 .bottompadding-75 {
-  padding-bottom: 75;
+  padding-bottom: 75px;
 }
 
 .leftpadding-75 {
-  padding-left: 75;
+  padding-left: 75px;
 }
 
 .toppadding-80 {
-  padding-top: 80;
+  padding-top: 80px;
 }
 
 .rightpadding-80 {
-  padding-right: 80;
+  padding-right: 80px;
 }
 
 .bottompadding-80 {
-  padding-bottom: 80;
+  padding-bottom: 80px;
 }
 
 .leftpadding-80 {
-  padding-left: 80;
+  padding-left: 80px;
 }
 
 .toppadding-85 {
-  padding-top: 85;
+  padding-top: 85px;
 }
 
 .rightpadding-85 {
-  padding-right: 85;
+  padding-right: 85px;
 }
 
 .bottompadding-85 {
-  padding-bottom: 85;
+  padding-bottom: 85px;
 }
 
 .leftpadding-85 {
-  padding-left: 85;
+  padding-left: 85px;
 }
 
 .toppadding-90 {
-  padding-top: 90;
+  padding-top: 90px;
 }
 
 .rightpadding-90 {
-  padding-right: 90;
+  padding-right: 90px;
 }
 
 .bottompadding-90 {
-  padding-bottom: 90;
+  padding-bottom: 90px;
 }
 
 .leftpadding-90 {
-  padding-left: 90;
+  padding-left: 90px;
 }
 
 .toppadding-95 {
-  padding-top: 95;
+  padding-top: 95px;
 }
 
 .rightpadding-95 {
-  padding-right: 95;
+  padding-right: 95px;
 }
 
 .bottompadding-95 {
-  padding-bottom: 95;
+  padding-bottom: 95px;
 }
 
 .leftpadding-95 {
-  padding-left: 95;
+  padding-left: 95px;
 }
 
 .toppadding-100 {
-  padding-top: 100;
+  padding-top: 100px;
 }
 
 .rightpadding-100 {
-  padding-right: 100;
+  padding-right: 100px;
 }
 
 .bottompadding-100 {
-  padding-bottom: 100;
+  padding-bottom: 100px;
 }
 
 .leftpadding-100 {
-  padding-left: 100;
+  padding-left: 100px;
 }
 
 .toppadding-105 {
-  padding-top: 105;
+  padding-top: 105px;
 }
 
 .rightpadding-105 {
-  padding-right: 105;
+  padding-right: 105px;
 }
 
 .bottompadding-105 {
-  padding-bottom: 105;
+  padding-bottom: 105px;
 }
 
 .leftpadding-105 {
-  padding-left: 105;
+  padding-left: 105px;
 }
 
 .toppadding-110 {
-  padding-top: 110;
+  padding-top: 110px;
 }
 
 .rightpadding-110 {
-  padding-right: 110;
+  padding-right: 110px;
 }
 
 .bottompadding-110 {
-  padding-bottom: 110;
+  padding-bottom: 110px;
 }
 
 .leftpadding-110 {
-  padding-left: 110;
+  padding-left: 110px;
 }
 
 .toppadding-115 {
-  padding-top: 115;
+  padding-top: 115px;
 }
 
 .rightpadding-115 {
-  padding-right: 115;
+  padding-right: 115px;
 }
 
 .bottompadding-115 {
-  padding-bottom: 115;
+  padding-bottom: 115px;
 }
 
 .leftpadding-115 {
-  padding-left: 115;
+  padding-left: 115px;
 }
 
 .toppadding-120 {
-  padding-top: 120;
+  padding-top: 120px;
 }
 
 .rightpadding-120 {
-  padding-right: 120;
+  padding-right: 120px;
 }
 
 .bottompadding-120 {
-  padding-bottom: 120;
+  padding-bottom: 120px;
 }
 
 .leftpadding-120 {
-  padding-left: 120;
+  padding-left: 120px;
 }
 
 .toppadding-125 {
-  padding-top: 125;
+  padding-top: 125px;
 }
 
 .rightpadding-125 {
-  padding-right: 125;
+  padding-right: 125px;
 }
 
 .bottompadding-125 {
-  padding-bottom: 125;
+  padding-bottom: 125px;
 }
 
 .leftpadding-125 {
-  padding-left: 125;
+  padding-left: 125px;
 }
 
 .toppadding-130 {
-  padding-top: 130;
+  padding-top: 130px;
 }
 
 .rightpadding-130 {
-  padding-right: 130;
+  padding-right: 130px;
 }
 
 .bottompadding-130 {
-  padding-bottom: 130;
+  padding-bottom: 130px;
 }
 
 .leftpadding-130 {
-  padding-left: 130;
+  padding-left: 130px;
 }
 
 .toppadding-135 {
-  padding-top: 135;
+  padding-top: 135px;
 }
 
 .rightpadding-135 {
-  padding-right: 135;
+  padding-right: 135px;
 }
 
 .bottompadding-135 {
-  padding-bottom: 135;
+  padding-bottom: 135px;
 }
 
 .leftpadding-135 {
-  padding-left: 135;
+  padding-left: 135px;
 }
 
 .toppadding-140 {
-  padding-top: 140;
+  padding-top: 140px;
 }
 
 .rightpadding-140 {
-  padding-right: 140;
+  padding-right: 140px;
 }
 
 .bottompadding-140 {
-  padding-bottom: 140;
+  padding-bottom: 140px;
 }
 
 .leftpadding-140 {
-  padding-left: 140;
+  padding-left: 140px;
 }
 
 .toppadding-145 {
-  padding-top: 145;
+  padding-top: 145px;
 }
 
 .rightpadding-145 {
-  padding-right: 145;
+  padding-right: 145px;
 }
 
 .bottompadding-145 {
-  padding-bottom: 145;
+  padding-bottom: 145px;
 }
 
 .leftpadding-145 {
-  padding-left: 145;
+  padding-left: 145px;
 }
 
 .toppadding-150 {
-  padding-top: 150;
+  padding-top: 150px;
 }
 
 .rightpadding-150 {
-  padding-right: 150;
+  padding-right: 150px;
 }
 
 .bottompadding-150 {
-  padding-bottom: 150;
+  padding-bottom: 150px;
 }
 
 .leftpadding-150 {
-  padding-left: 150;
+  padding-left: 150px;
 }
 
 .toppadding-155 {
-  padding-top: 155;
+  padding-top: 155px;
 }
 
 .rightpadding-155 {
-  padding-right: 155;
+  padding-right: 155px;
 }
 
 .bottompadding-155 {
-  padding-bottom: 155;
+  padding-bottom: 155px;
 }
 
 .leftpadding-155 {
-  padding-left: 155;
+  padding-left: 155px;
 }
 
 .toppadding-160 {
-  padding-top: 160;
+  padding-top: 160px;
 }
 
 .rightpadding-160 {
-  padding-right: 160;
+  padding-right: 160px;
 }
 
 .bottompadding-160 {
-  padding-bottom: 160;
+  padding-bottom: 160px;
 }
 
 .leftpadding-160 {
-  padding-left: 160;
+  padding-left: 160px;
 }
 
 .toppadding-165 {
-  padding-top: 165;
+  padding-top: 165px;
 }
 
 .rightpadding-165 {
-  padding-right: 165;
+  padding-right: 165px;
 }
 
 .bottompadding-165 {
-  padding-bottom: 165;
+  padding-bottom: 165px;
 }
 
 .leftpadding-165 {
-  padding-left: 165;
+  padding-left: 165px;
 }
 
 .toppadding-170 {
-  padding-top: 170;
+  padding-top: 170px;
 }
 
 .rightpadding-170 {
-  padding-right: 170;
+  padding-right: 170px;
 }
 
 .bottompadding-170 {
-  padding-bottom: 170;
+  padding-bottom: 170px;
 }
 
 .leftpadding-170 {
-  padding-left: 170;
+  padding-left: 170px;
 }
 
 .toppadding-175 {
-  padding-top: 175;
+  padding-top: 175px;
 }
 
 .rightpadding-175 {
-  padding-right: 175;
+  padding-right: 175px;
 }
 
 .bottompadding-175 {
-  padding-bottom: 175;
+  padding-bottom: 175px;
 }
 
 .leftpadding-175 {
-  padding-left: 175;
+  padding-left: 175px;
 }
 
 .toppadding-180 {
-  padding-top: 180;
+  padding-top: 180px;
 }
 
 .rightpadding-180 {
-  padding-right: 180;
+  padding-right: 180px;
 }
 
 .bottompadding-180 {
-  padding-bottom: 180;
+  padding-bottom: 180px;
 }
 
 .leftpadding-180 {
-  padding-left: 180;
+  padding-left: 180px;
 }
 
 .toppadding-185 {
-  padding-top: 185;
+  padding-top: 185px;
 }
 
 .rightpadding-185 {
-  padding-right: 185;
+  padding-right: 185px;
 }
 
 .bottompadding-185 {
-  padding-bottom: 185;
+  padding-bottom: 185px;
 }
 
 .leftpadding-185 {
-  padding-left: 185;
+  padding-left: 185px;
 }
 
 .toppadding-190 {
-  padding-top: 190;
+  padding-top: 190px;
 }
 
 .rightpadding-190 {
-  padding-right: 190;
+  padding-right: 190px;
 }
 
 .bottompadding-190 {
-  padding-bottom: 190;
+  padding-bottom: 190px;
 }
 
 .leftpadding-190 {
-  padding-left: 190;
+  padding-left: 190px;
 }
 
 .toppadding-195 {
-  padding-top: 195;
+  padding-top: 195px;
 }
 
 .rightpadding-195 {
-  padding-right: 195;
+  padding-right: 195px;
 }
 
 .bottompadding-195 {
-  padding-bottom: 195;
+  padding-bottom: 195px;
 }
 
 .leftpadding-195 {
-  padding-left: 195;
+  padding-left: 195px;
 }
 
 .toppadding-200 {
-  padding-top: 200;
+  padding-top: 200px;
 }
 
 .rightpadding-200 {
-  padding-right: 200;
+  padding-right: 200px;
 }
 
 .bottompadding-200 {
-  padding-bottom: 200;
+  padding-bottom: 200px;
 }
 
 .leftpadding-200 {
-  padding-left: 200;
+  padding-left: 200px;
 }
 
 .nopadding {

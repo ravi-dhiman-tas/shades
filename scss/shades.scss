@@ -13,10 +13,11 @@
 @import "partials/dropdown";
 @import "partials/progressbar";
 @import "partials/autocomplete";
+@import "partials/label";
 
 // // utilities
 // @import "util/opacity";
-@import "util/padding";
+@import "util/padding"; // TODO: include this for new css
 // @import "util/margin";
 
 // legacy partials
@@ -34,3 +35,4 @@
 // @import "partials/legacy/dropdown";
 // @import "partials/legacy/progressbar";
 // @import "partials/legacy/autocomplete";
+// @import "partials/legacy/footer";
