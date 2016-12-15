@@ -1,3 +1,8 @@
+.#{$cls-pre}-form-group {
+    margin-bottom: 15px;
+    @include borderbox();
+}
+
 .#{$cls-pre}-form-control {
 	display: block;
 	width: 100%;
