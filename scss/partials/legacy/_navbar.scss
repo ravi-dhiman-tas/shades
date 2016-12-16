@@ -498,6 +498,11 @@
 		@include borderbox();
 		@include clearfix();
 
+		@include media-breakpoint-up(md) {
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+
 		@include media-breakpoint-down(sm) {
 			padding-right: 15px;
 		}

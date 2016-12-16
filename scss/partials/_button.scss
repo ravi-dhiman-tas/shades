@@ -1,6 +1,6 @@
 .#{$cls-pre}-btn {
 	display: inline-block;
-	padding: $btn-padding-y $btn-padding-x;
+	padding: 7px 22px;
 	line-height: $btn-line-height;
 	height: 34px;
 	font-size: $font-size-base;
@@ -8,7 +8,7 @@
 	text-transform: $btn-font-transform;
 	letter-spacing: $btn-font-spacing;
 	box-shadow: $btn-box-shadow;
-	@include btn-border-radius($btn-border-radius);
+	@include btn-border-radius(2px);
 	border: 1px solid transparent;
 	background-image: none;
 	white-space: nowrap;
@@ -37,9 +37,9 @@
 	}
 
 	&.#{$cls-pre}-btn-lg {
-		height: $btn-height-lg;
-		padding: $btn-padding-y-lg $btn-padding-x-lg;
-		font-size: $font-size-lg;
+		height: 38px;
+		padding: 9px 39px;
+		font-size: 16px;
 	}
 
 	&.#{$cls-pre}-btn-sm {

@@ -1,6 +1,6 @@
 .#{$cls-pre}-btn {
 	display: inline-block;
-	padding: $btn-padding-y $btn-padding-x;
+	padding: 7px 22px;
 	line-height: $btn-line-height;
 	height: 34px;
 	font-size: $font-size-base;
@@ -8,17 +8,17 @@
 	text-transform: $btn-font-transform;
 	letter-spacing: $btn-font-spacing;
 	box-shadow: $btn-box-shadow;
-	@include btn-border-radius($btn-border-radius);
+	@include btn-border-radius(2px);
 	border: 1px solid transparent;
 	background-image: none;
 	white-space: nowrap;
 	vertical-align: middle;
 	text-align: center;
 	cursor: pointer;
-	@include borderbox();
 	@include touch-action(manipulation);
 	@include user-select(none);
 	@include transition(all 0.2s ease);
+	@include borderbox();
 
 	&:hover, &:focus, &:active {
 		outline: $btn-active-outline;
@@ -38,9 +38,9 @@
 	}
 
 	&.#{$cls-pre}-btn-lg {
-		height: $btn-height-lg;
-		padding: $btn-padding-y-lg $btn-padding-x-lg;
-		font-size: $font-size-lg;
+		height: 38px;
+		padding: 9px 39px;
+		font-size: 16px;
 	}
 
 	&.#{$cls-pre}-btn-sm {
@@ -60,7 +60,6 @@
 	color: $btn-default-color;
 	background: $btn-default-bg;
 	border-color: $btn-default-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-default-hover($btn-default-color, $btn-default-bg, $btn-default-border);
@@ -79,7 +78,6 @@
 	color: $btn-primary-color;
 	background: $btn-primary-bg;
 	border-color: $btn-primary-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-hover($btn-primary-color, $btn-primary-bg, $btn-primary-border);
@@ -98,7 +96,6 @@
 	color: $btn-red-color;
 	background: $btn-red-bg;
 	border-color: $btn-red-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-hover($btn-red-color, $btn-red-bg, $btn-red-border);
@@ -117,7 +114,6 @@
 	color: $btn-green-color;
 	background: $btn-green-bg;
 	border-color: $btn-green-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-hover($btn-green-color, $btn-green-bg, $btn-green-border);
@@ -136,7 +132,6 @@
 	color: $btn-orange-color;
 	background: $btn-orange-bg;
 	border-color: $btn-orange-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-hover($btn-orange-color, $btn-orange-bg, $btn-orange-border);
@@ -156,7 +151,6 @@
 	color: $btn-default-bg;
 	background: transparent;
 	border-color: $btn-default-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-outline-default-hover($btn-default-bg, $btn-default-border);
@@ -175,7 +169,6 @@
 	color: $btn-primary-bg;
 	background: transparent;
 	border-color: $btn-primary-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-outline-hover($btn-primary-bg, $btn-primary-border);
@@ -190,11 +183,10 @@
 	}
 }
 
-.#{$cls-pre}-btn-outline-red {
+.#{$cls-pre}-btn-red {
 	color: $btn-red-bg;
 	background: transparent;
 	border-color: $btn-red-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-outline-hover($btn-red-bg, $btn-red-border);
@@ -209,11 +201,10 @@
 	}
 }
 
-.#{$cls-pre}-btn-outline-green {
+.#{$cls-pre}-btn-green {
 	color: $btn-green-bg;
 	background: transparent;
 	border-color: $btn-green-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-outline-hover($btn-green-bg, $btn-green-border);
@@ -228,11 +219,10 @@
 	}
 }
 
-.#{$cls-pre}-btn-outline-orange {
+.#{$cls-pre}-btn-orange {
 	color: $btn-orange-bg;
 	background: transparent;
 	border-color: $btn-orange-border;
-	@include borderbox();
 
 	&:hover {
 		@include btn-outline-hover($btn-orange-bg, $btn-orange-border);
@@ -249,13 +239,11 @@
 
 .#{$cls-pre}-btn-block {
 	width: 100%;
-	@include borderbox();
 }
 
 .#{$cls-pre}-btn-link {
 	background: transparent!important;
 	border-width: 0!important;
-	@include borderbox();
 	&:hover, &:focus {
 		@include btn-link-hover()
 	}

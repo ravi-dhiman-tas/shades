@@ -53,3 +53,18 @@ button {
 		outline: none;
 	}
 }
+
+.#{$cls-pre}-borderbox {
+	@include borderbox();
+}
+
+.#{$cls-pre}-news-article-heading {
+	margin-top: 2px;
+	font-weight: 400;
+	font-size: 24px;
+
+	> a {
+		text-decoration: none;
+		color: rgba(0, 0, 0, 0.8);
+	}
+}
