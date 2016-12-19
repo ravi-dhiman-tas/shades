@@ -1,0 +1,86 @@
+.#{$cls-pre}-badges {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    @include border-radius(34px);
+    background: none;
+    text-align: center;
+    line-height: normal;
+    padding: 7px;
+    vertical-align: middle;
+    margin-left: 3px;
+    margin-right: 3px;
+
+    &::last-child {
+        margin-right: 0;
+    }
+}
+
+.badges--default {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0);
+
+    &:hover {
+        border-color: darken(#afafaf, 5%);
+    }
+
+    &:focus {
+        border-color: darken($brand-primary, 5%);
+    }
+
+    &:active {
+        border-color: darken($brand-primary, 5%);
+    }
+}
+
+.badges--blue {
+    background: $brand-primary;
+    color: #fff;
+
+    &:hover {
+        background: lighten($brand-info, 5%);
+        color: #fff;
+    }
+
+    &:focus {
+        background: darken($brand-primary, 5%);
+        color: #fff;
+    }
+
+    &:active {
+        background: darken($brand-primary, 5%);
+        color: #fff;
+    }
+}
+
+.badges--outline-default {
+    border: 1px solid lighten(#afafaf, 20%);
+
+    &:hover {
+        border-color: darken(#afafaf, 5%);
+    }
+
+    &:focus {
+        border-color: darken($brand-primary, 5%);
+    }
+
+    &:active {
+        border-color: darken($brand-primary, 5%);
+    }
+}
+
+.badges--outline-blue {
+    border: 1px solid lighten($brand-info, 20%);
+
+    &:hover {
+        border-color: darken($brand-info, 5%);
+    }
+
+    &:focus {
+        border-color: darken($brand-primary, 5%);
+    }
+
+    &:active {
+        border-color: darken($brand-primary, 5%);
+    }
+}

@@ -1,0 +1,33 @@
+.#{$cls-pre}-list {
+
+}
+
+.list--default {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    > li {
+        padding: 5px 0px;
+    }
+}
+
+ul.list--circle {
+    list-style-type: circle;
+}
+
+ul.list--square {
+    list-style-type: square;
+}
+
+ul.list--disc {
+    list-style-type: disc;
+}
+
+ol.list--upperroman {
+    list-style-type: upper-roman;
+}
+
+ol.list--loweraplpha {
+    list-style-type: lower-alpha;
+}
