@@ -56,6 +56,15 @@
 	}
 }
 
+.btn--wide {
+	min-width: 150px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 400;
+	height: auto;
+	padding: 9px 10px !important;
+}
+
 .#{$cls-pre}-btn-default {
 	color: $btn-default-color;
 	background: $btn-default-bg;
@@ -143,6 +152,24 @@
 
 	&:active {
 		@include btn-focus($btn-orange-color, $btn-orange-bg, $btn-orange-border);
+	}
+}
+
+.#{$cls-pre}-btn-white {
+	color: $gray-text;
+	background: #fff;
+	border-color: #eee;
+
+	&:hover {
+		@include btn-hover($gray-text, #fff, #fff);
+	}
+
+	&:focus {
+		color: $gray-text;
+	}
+
+	&:active {
+		@include btn-focus($gray-text, #fff, #fff);
 	}
 }
 
@@ -234,6 +261,24 @@
 
 	&:active {
 		@include btn-outline-focus($btn-orange-bg, $btn-orange-border);
+	}
+}
+
+.#{$cls-pre}-btn-outline-white {
+	color: #fff;
+	background: transparent;
+	border-color: #eee;
+
+	&:hover {
+		@include btn-outline-hover(#fff, #fff);
+	}
+
+	&:focus {
+		color: #fff;
+	}
+
+	&:active {
+		@include btn-outline-focus(#fff, #fff);
 	}
 }
 
