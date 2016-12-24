@@ -1525,14 +1525,14 @@ button:hover, button:focus {
   font-size: 16px;
 }
 .ti-btn.ti-btn-sm {
-  height: 27.5px;
-  padding: 4px 21px;
-  font-size: 13px;
+  height: 23px;
+  padding: 4px 14px;
+  font-size: 11px;
 }
 .ti-btn.ti-btn-xs {
-  height: 27.5px;
-  padding: 4px 21px;
-  font-size: 11px;
+  height: 20px;
+  padding: 3px 10px;
+  font-size: 9px;
 }
 
 .btn--wide {
@@ -1695,55 +1695,55 @@ button:hover, button:focus {
   border-color: #1b436a;
 }
 
-.ti-btn-red {
+.ti-btn-outline-red {
   color: #db4e3f;
   background: transparent;
   border-color: #db4e3f;
 }
-.ti-btn-red:hover {
+.ti-btn-outline-red:hover {
   color: #e3766a;
   border-color: #e3766a;
 }
-.ti-btn-red:focus {
+.ti-btn-outline-red:focus {
   color: #db4e3f;
 }
-.ti-btn-red:active {
+.ti-btn-outline-red:active {
   color: #db4e3f;
   background: transparent;
   border-color: #ad2e20;
 }
 
-.ti-btn-green {
+.ti-btn-outline-green {
   color: #4caf50;
   background: transparent;
   border-color: #4caf50;
 }
-.ti-btn-green:hover {
+.ti-btn-outline-green:hover {
   color: #6ec071;
   border-color: #6ec071;
 }
-.ti-btn-green:focus {
+.ti-btn-outline-green:focus {
   color: #4caf50;
 }
-.ti-btn-green:active {
+.ti-btn-outline-green:active {
   color: #4caf50;
   background: transparent;
   border-color: #357a38;
 }
 
-.ti-btn-orange {
+.ti-btn-outline-orange {
   color: #f6a623;
   background: transparent;
   border-color: #f6a623;
 }
-.ti-btn-orange:hover {
+.ti-btn-outline-orange:hover {
   color: #f8ba54;
   border-color: #f8ba54;
 }
-.ti-btn-orange:focus {
+.ti-btn-outline-orange:focus {
   color: #f6a623;
 }
-.ti-btn-orange:active {
+.ti-btn-outline-orange:active {
   color: #f6a623;
   background: transparent;
   border-color: #c47d08;
@@ -1857,7 +1857,6 @@ button:hover, button:focus {
 
 .ti-card-panel {
   position: relative;
-  padding: 20px;
 }
 @media (min-width: 576px) {
   .ti-card-panel {

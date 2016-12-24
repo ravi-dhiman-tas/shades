@@ -44,15 +44,15 @@
 	}
 
 	&.#{$cls-pre}-btn-sm {
-		height: $btn-height-sm;
-		padding: $btn-padding-y-sm $btn-padding-x-sm;
-		font-size: $font-size-sm;
+		height: 23px;
+		padding: 4px 14px;
+		font-size: 11px
 	}
 
 	&.#{$cls-pre}-btn-xs {
-		height: $btn-height-sm;
-		padding: $btn-padding-y-sm $btn-padding-x-sm;
-		font-size: $font-size-xs;
+		height: 20px;
+		padding: 3px 10px;
+		font-size: 9px;
 	}
 }
 
@@ -210,7 +210,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-red {
+.#{$cls-pre}-btn-outline-red {
 	color: $btn-red-bg;
 	background: transparent;
 	border-color: $btn-red-border;
@@ -228,7 +228,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-green {
+.#{$cls-pre}-btn-outline-green {
 	color: $btn-green-bg;
 	background: transparent;
 	border-color: $btn-green-border;
@@ -246,7 +246,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-orange {
+.#{$cls-pre}-btn-outline-orange {
 	color: $btn-orange-bg;
 	background: transparent;
 	border-color: $btn-orange-border;
