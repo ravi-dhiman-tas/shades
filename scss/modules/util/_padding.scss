@@ -3,16 +3,16 @@
 
 	@while( $i <= $max-range ) {
 		.top#{$spacing}-#{$i} {
-			#{$spacing}-top: $i;
+			#{$spacing}-top: ($i + px);
 		}
 		.right#{$spacing}-#{$i} {
-			#{$spacing}-right: $i;
+			#{$spacing}-right: ($i + px);
 		}
 		.bottom#{$spacing}-#{$i} {
-			#{$spacing}-bottom: $i;
+			#{$spacing}-bottom: ($i + px);
 		}
 		.left#{$spacing}-#{$i} {
-			#{$spacing}-left: $i;
+			#{$spacing}-left: ($i + px);
 		}
 
 		$i: $i + $step;

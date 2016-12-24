@@ -52,10 +52,10 @@
 	border-color: lighten($border, 10%);
 }
 
-@mixin btn-outline-focus($color, $border) {
+@mixin btn-outline-focus($color, $bg) {
 	color: $color;
-	background: darken($border, 15%);
-	border-color: darken($border, 15%);
+	background: transparent;
+	border-color: darken($bg, 15%);
 }
 
 @mixin btn-outline-disabled($color, $border) {

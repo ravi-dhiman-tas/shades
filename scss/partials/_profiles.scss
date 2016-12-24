@@ -1,0 +1,100 @@
+/* profile cover wrapper */
+.#{$cls-pre}--cover-wrap {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: -15px;
+    @include clearfix();
+}
+
+/* profile cover */
+.#{$cls-pre}--cover-photo {
+    width: 100%;
+    height: 263px;
+    @include border-radius(2px);
+    box-shadow: 0 1px 2px 0 rgba(31, 54, 77, 0.25);
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+}
+
+/* profile avatar */
+.#{$cls-pre}--avatar-wrap {
+    margin-top: -107px;
+}
+
+/* profile avatar */
+.#{$cls-pre}--avatar {
+    @include border-radius(10px);
+    border: solid 4px #fff;
+    overflow: hidden;
+    box-shadow: 0 1px 2px 0 rgba(31, 54, 77, 0.25);
+}
+
+.#{$cls-pre}--avatar-about {
+    padding-top: 15px;
+
+    .about--name {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 1;
+        margin-top: 10px;
+    }
+
+    .about--role {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .about--firm {
+        font-weight: bold;
+        color: $brand-primary;
+        margin-top: 10px;
+    }
+
+    .about--muted {
+        color: #afafaf;
+    }
+}
+
+.#{$cls-pre}--avatar-quote {
+    font-size: 18px;
+    line-height: 1.8;
+    position: relative;
+    z-index: 10;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 90px;
+        background-image: url("../../../beta/images/icons/icon-quote-start.png");
+        background-size: 100%;
+        background-position: top left;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 90px;
+        height: 90px;
+        background-image: url("../../../beta/images/icons/icon-quote-end.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        z-index: -1;
+    }
+}
+
+.title--small {
+    text-transform: uppercase;
+    color: #afafaf;
+    font-weight: bold;
+    letter-spacing: 1px;
+}

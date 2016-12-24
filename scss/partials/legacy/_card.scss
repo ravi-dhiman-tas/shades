@@ -14,7 +14,6 @@
 
 .#{$cls-pre}-card-panel {
 	position: relative;
-	padding: ($card-spacer + 5);
 
 	@include media-breakpoint-up(sm) {
 		background: $card-bg;

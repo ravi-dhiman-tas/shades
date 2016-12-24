@@ -8,6 +8,33 @@
 		box-shadow: $card-box-shadow;
 		border: $card-border-width solid $card-border-color;
 	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.#{$cls-pre}-card--profile {
+	position: relative;
+	padding: $card-spacer;
+
+	@include media-breakpoint-up(sm) {
+		padding: ($card-spacer + 20);
+		background: $card-bg;
+		border-radius: $border-radius;
+		box-shadow: $card-box-shadow;
+		border: $card-border-width solid $card-border-color;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.card--heading {
+	margin-top: 2px;
+	font-weight: bold;
+	color: $heading-text;
 }
 
 .#{$cls-pre}-card-panel {

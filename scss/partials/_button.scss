@@ -1,14 +1,14 @@
 .#{$cls-pre}-btn {
 	display: inline-block;
-	padding: $btn-padding-y $btn-padding-x;
-	line-height: $btn-line-height;
+	padding: 6px 18px;
+	line-height: 1;
 	height: 34px;
 	font-size: $font-size-base;
 	font-weight: $btn-font-weight;
 	text-transform: $btn-font-transform;
 	letter-spacing: $btn-font-spacing;
 	box-shadow: $btn-box-shadow;
-	@include btn-border-radius($btn-border-radius);
+	@include btn-border-radius(2px);
 	border: 1px solid transparent;
 	background-image: none;
 	white-space: nowrap;
@@ -37,9 +37,10 @@
 	}
 
 	&.#{$cls-pre}-btn-lg {
-		height: $btn-height-lg;
-		padding: $btn-padding-y-lg $btn-padding-x-lg;
-		font-size: $font-size-lg;
+		height: 38px;
+		padding: 9px 39px;
+		font-size: 15px;
+		line-height: 1.2;
 	}
 
 	&.#{$cls-pre}-btn-sm {
@@ -53,6 +54,15 @@
 		padding: $btn-padding-y-sm $btn-padding-x-sm;
 		font-size: $font-size-xs;
 	}
+}
+
+.btn--wide {
+	min-width: 150px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 400;
+	height: auto;
+	padding: 9px 10px !important;
 }
 
 .#{$cls-pre}-btn-default {
@@ -145,6 +155,24 @@
 	}
 }
 
+.#{$cls-pre}-btn-white {
+	color: $gray-text;
+	background: #fff;
+	border-color: #eee;
+
+	&:hover {
+		@include btn-hover($gray-text, #fff, #fff);
+	}
+
+	&:focus {
+		color: $gray-text;
+	}
+
+	&:active {
+		@include btn-focus($gray-text, #fff, #fff);
+	}
+}
+
 /* button outline */
 .#{$cls-pre}-btn-outline-default {
 	color: $btn-default-bg;
@@ -182,7 +210,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-red {
+.#{$cls-pre}-btn-outline-red {
 	color: $btn-red-bg;
 	background: transparent;
 	border-color: $btn-red-border;
@@ -200,7 +228,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-green {
+.#{$cls-pre}-btn-outline-green {
 	color: $btn-green-bg;
 	background: transparent;
 	border-color: $btn-green-border;
@@ -218,7 +246,7 @@
 	}
 }
 
-.#{$cls-pre}-btn-orange {
+.#{$cls-pre}-btn-outline-orange {
 	color: $btn-orange-bg;
 	background: transparent;
 	border-color: $btn-orange-border;
@@ -233,6 +261,24 @@
 
 	&:active {
 		@include btn-outline-focus($btn-orange-bg, $btn-orange-border);
+	}
+}
+
+.#{$cls-pre}-btn-outline-white {
+	color: #fff;
+	background: transparent;
+	border-color: #eee;
+
+	&:hover {
+		@include btn-outline-hover(#fff, #fff);
+	}
+
+	&:focus {
+		color: #fff;
+	}
+
+	&:active {
+		@include btn-outline-focus(#fff, #fff);
 	}
 }
 

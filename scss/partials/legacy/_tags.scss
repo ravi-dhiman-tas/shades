@@ -1,0 +1,52 @@
+.#{$cls-pre}-tags {
+	padding: 6px 8px;
+	display: inline-block;
+	font-size: 0.9rem;
+	font-weight: normal;
+	line-height: 1;
+	vertical-align: middle;
+	text-align: center;
+	border: 1px solid rgba(0,0,0,0);
+	@include border-radius(2px);
+	background: $btn-default-border;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	margin-right: 3px;
+    @include borderbox();
+
+	&::last-child {
+		margin-right: 0;
+	}
+}
+
+.tags--default {
+	border: 1px solid #d9d9d9;
+	background: #fff;
+	color: $heading-text;
+
+	&:hover {
+		border-color: #357ec6;
+		color: $heading-text;
+	}
+
+	&:focus {
+		border-color: darken(#357ec6, 15%);
+		color: $heading-text;
+	}
+}
+
+.tags--outline-blue {
+	border: 1px solid $brand-info;
+	background: none;
+	color: $brand-info;
+
+	&:hover {
+		border-color: #357ec6;
+		color: $brand-info;
+	}
+
+	&:focus {
+		border-color: darken($brand-info, 15%);
+		color: $brand-info;
+	}
+}
