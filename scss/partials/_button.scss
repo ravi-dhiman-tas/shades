@@ -1,7 +1,7 @@
 .#{$cls-pre}-btn {
 	display: inline-block;
-	padding: 6px 18px;
-	line-height: 1;
+	padding: 6px 16px;
+	line-height: 1.43;
 	height: 34px;
 	font-size: $font-size-base;
 	font-weight: $btn-font-weight;
@@ -292,4 +292,8 @@
 	&:hover, &:focus {
 		@include btn-link-hover()
 	}
+}
+
+.btn--auto-height {
+	height: auto;
 }

@@ -24,6 +24,19 @@
 		}
 	}
 
+	.#{$cls-pre}-typeahead-links {
+		display: block;
+		padding: 7.5px;
+
+		&:hover {
+			background: rgba(#2b69a7, 0.05);
+		}
+
+		&:focus {
+			background: rgba(#43484d, 0.05);
+		}
+	}
+
 	.#{$cls-pre}-typeahead-results {
 		display: table;
 		width: 100%;

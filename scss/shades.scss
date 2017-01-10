@@ -1,5 +1,6 @@
 // modules
 @import "modules/all";
+@import "custom-var";
 
 // partials
 // @import "partials/base";
@@ -18,8 +19,10 @@
 // @import "partials/badges";
 // @import "partials/list";
 // @import "partials/profiles";
+// @import "partials/profile-carousel";
+// @import "partials/fonts";
 
-// // utilities
+// utilities
 // @import "util/opacity";
 // @import "util/padding"; // TODO: include this for new css
 // @import "util/margin";

@@ -1514,9 +1514,10 @@ button:hover, button:focus {
 }
 .ti-btn:disabled {
   pointer-events: none;
-  color: #c8c8c8;
-  background: #d4d4d4;
-  border-color: #d4d4d4;
+  cursor: not-allowed;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
   box-shadow: 0 0 1px transparent;
 }
 .ti-btn.ti-btn-lg {
@@ -1525,8 +1526,8 @@ button:hover, button:focus {
   font-size: 16px;
 }
 .ti-btn.ti-btn-sm {
-  height: 23px;
-  padding: 4px 14px;
+  height: 24px;
+  padding: 3px 14px;
   font-size: 11px;
 }
 .ti-btn.ti-btn-xs {
@@ -1562,6 +1563,13 @@ button:hover, button:focus {
   background: silver;
   border-color: silver;
 }
+.ti-btn-default:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-primary {
   color: #fff;
@@ -1580,6 +1588,13 @@ button:hover, button:focus {
   color: #fff;
   background: #1b436a;
   border-color: #1b436a;
+}
+.ti-btn-primary:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
 }
 
 .ti-btn-red {
@@ -1600,6 +1615,13 @@ button:hover, button:focus {
   background: #ad2e20;
   border-color: #ad2e20;
 }
+.ti-btn-red:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-green {
   color: #fff;
@@ -1618,6 +1640,13 @@ button:hover, button:focus {
   color: #fff;
   background: #357a38;
   border-color: #357a38;
+}
+.ti-btn-green:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
 }
 
 .ti-btn-orange {
@@ -1638,6 +1667,13 @@ button:hover, button:focus {
   background: #c47d08;
   border-color: #c47d08;
 }
+.ti-btn-orange:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-white {
   color: #a7a7a7;
@@ -1656,6 +1692,13 @@ button:hover, button:focus {
   color: #a7a7a7;
   background: #d9d9d9;
   border-color: #d9d9d9;
+}
+.ti-btn-white:disabled {
+  pointer-events: none;
+  color: white;
+  background: #c7c7c7;
+  border-color: #c7c7c7;
+  box-shadow: 0 0 1px transparent;
 }
 
 /* button outline */
@@ -1676,6 +1719,13 @@ button:hover, button:focus {
   background: transparent;
   border-color: silver;
 }
+.ti-btn-outline-default:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-outline-primary {
   color: #2b69a7;
@@ -1693,6 +1743,13 @@ button:hover, button:focus {
   color: #2b69a7;
   background: transparent;
   border-color: #1b436a;
+}
+.ti-btn-outline-primary:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
 }
 
 .ti-btn-outline-red {
@@ -1712,6 +1769,13 @@ button:hover, button:focus {
   background: transparent;
   border-color: #ad2e20;
 }
+.ti-btn-outline-red:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-outline-green {
   color: #4caf50;
@@ -1729,6 +1793,13 @@ button:hover, button:focus {
   color: #4caf50;
   background: transparent;
   border-color: #357a38;
+}
+.ti-btn-outline-green:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
 }
 
 .ti-btn-outline-orange {
@@ -1748,6 +1819,13 @@ button:hover, button:focus {
   background: transparent;
   border-color: #c47d08;
 }
+.ti-btn-outline-orange:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-outline-white {
   color: #fff;
@@ -1766,6 +1844,13 @@ button:hover, button:focus {
   background: transparent;
   border-color: #d9d9d9;
 }
+.ti-btn-outline-white:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
+}
 
 .ti-btn-block {
   width: 100%;
@@ -1777,6 +1862,17 @@ button:hover, button:focus {
 }
 .ti-btn-link:hover, .ti-btn-link:focus {
   text-decoration: underline !important;
+}
+.ti-btn-link:disabled {
+  pointer-events: none;
+  color: white;
+  background: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 1px transparent;
+}
+
+.btn--auto-height {
+  height: auto;
 }
 
 .ti-tags {
@@ -3204,9 +3300,9 @@ button:hover, button:focus {
 .ti-input-group .ti-input-group-icon {
   position: absolute;
   left: 0;
-  top: -2px;
+  top: 0px;
   padding-left: 10px;
-  padding-top: 9px;
+  padding-top: 7px;
   z-index: 1000;
   color: #a7a7a7;
   -webkit-box-sizing: border-box;
@@ -3225,7 +3321,7 @@ button:hover, button:focus {
 }
 
 .ti-input-group-addon {
-  padding: 9px 11px;
+  padding: 6px 11px;
   margin-bottom: 0;
   font-size: 14px;
   font-weight: normal;
@@ -3356,25 +3452,28 @@ button:hover, button:focus {
 }
 
 .ti-form-group {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+.ti-form-group .ti-label {
+  margin-bottom: 10px;
 }
 
 .ti-form-control {
   display: block;
   width: 100%;
-  padding: 9px 11px;
+  padding: 6px 11px;
   font-size: 14px;
-  line-height: normal;
+  line-height: 1.42857143;
   color: #525252;
   background-color: #fff;
   background-image: none;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.15);
   height: 34px;
-  border-radius: 3px;
+  border-radius: 2px;
   -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -ms-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -3425,6 +3524,10 @@ select.form-control:not([size]):not([multiple]) {
 select.form-control:focus::-ms-value {
   color: #525252;
   background-color: #fff;
+}
+
+textarea.form-control {
+  height: auto;
 }
 
 .dropdown-menu {
@@ -3536,6 +3639,16 @@ select.form-control:focus::-ms-value {
     right: 0;
     top: 60px;
   }
+}
+.ti-typeahead .ti-typeahead-links {
+  display: block;
+  padding: 7.5px;
+}
+.ti-typeahead .ti-typeahead-links:hover {
+  background: rgba(43, 105, 167, 0.05);
+}
+.ti-typeahead .ti-typeahead-links:focus {
+  background: rgba(67, 72, 77, 0.05);
 }
 .ti-typeahead .ti-typeahead-results {
   display: table;

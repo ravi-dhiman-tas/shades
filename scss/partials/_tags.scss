@@ -8,6 +8,7 @@
 	text-align: center;
 	border: 1px solid rgba(0,0,0,0);
 	@include border-radius(2px);
+	@include transition(all 0.3s ease);
 	background: $btn-default-border;
 	margin-top: 3px;
 	margin-bottom: 3px;
@@ -24,28 +25,38 @@
 	color: $heading-text;
 
 	&:hover {
-		border-color: #357ec6;
+		border-color: #2b69a7;
 		color: $heading-text;
 	}
 
 	&:focus {
-		border-color: darken(#357ec6, 15%);
+		border-color: darken(#2b69a7, 15%);
+		color: $heading-text;
+	}
+
+	&:active {
+		border-color: darken(#2b69a7, 15%);
 		color: $heading-text;
 	}
 }
 
 .tags--outline-blue {
-	border: 1px solid $brand-info;
+	border: 1px solid #2b69a7;
 	background: none;
-	color: $brand-info;
+	color: #2b69a7;
 
 	&:hover {
-		border-color: #357ec6;
-		color: $brand-info;
+		border-color: lighten(#2b69a7, 10%);
+		color: #2b69a7;
 	}
 
 	&:focus {
-		border-color: darken($brand-info, 15%);
-		color: $brand-info;
+		border-color: darken(#2b69a7, 15%);
+		color: #2b69a7;
+	}
+
+	&:active {
+		border-color: darken(#2b69a7, 15%);
+		color: #2b69a7;
 	}
 }

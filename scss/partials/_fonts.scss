@@ -1,0 +1,10 @@
+.fontsize-18 {
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.xs-text-center {
+    @include media-breakpoint-down(sm) {
+        text-align: center;
+    }
+}

@@ -33,9 +33,9 @@
 .#{$cls-pre}-input-group .#{$cls-pre}-input-group-icon {
 	position: absolute;
 	left: 0;
-	top: -2px;
+	top: 0px;
 	padding-left: 10px;
-	padding-top: $input-padding-y;
+	padding-top: ($input-padding-y + 1);
 	z-index: $zindex-navbar;
 	color: $gray-text;
 }

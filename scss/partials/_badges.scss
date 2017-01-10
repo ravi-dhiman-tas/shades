@@ -3,6 +3,7 @@
     width: 34px;
     height: 34px;
     @include border-radius(34px);
+    @include transition(all 0.3s ease);
     background: none;
     text-align: center;
     line-height: normal;

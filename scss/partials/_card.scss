@@ -16,7 +16,6 @@
 
 .#{$cls-pre}-card--profile {
 	position: relative;
-	padding: $card-spacer;
 
 	@include media-breakpoint-up(sm) {
 		padding: ($card-spacer + 20);
@@ -24,6 +23,11 @@
 		border-radius: $border-radius;
 		box-shadow: $card-box-shadow;
 		border: $card-border-width solid $card-border-color;
+	}
+
+	@include media-breakpoint-down(sm) {
+		padding-bottom: $card-spacer;
+		border-bottom: $card-border-width solid $card-border-color;
 	}
 
 	p:last-child {
@@ -35,6 +39,11 @@
 	margin-top: 2px;
 	font-weight: bold;
 	color: $heading-text;
+}
+
+.stream--heading {
+	margin-top: 0;
+	font-weight: bold;
 }
 
 .#{$cls-pre}-card-panel {

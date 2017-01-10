@@ -309,8 +309,8 @@
 
 			&.profile {
 				> a {
-					padding-top: 7px;
-					padding-bottom: 7px;
+					padding-top: 5px;
+					padding-bottom: 5px;
 					padding-right: 8px;
 					padding-left: 8px;
 				}
@@ -340,17 +340,6 @@
 					}
 				}
 			}
-
-
-			.#{$cls-pre}-profile-icon {
-				display: block;
-				border-radius: 50%;
-				border: none;
-				background: $gray-text;
-				width: 30px;
-				height: 30px;
-				overflow: hidden;
-			}
 		}
 
 		.#{$cls-pre}-hexagon {
@@ -364,6 +353,16 @@
 			padding-bottom: 6px;
 		}
 	}
+}
+
+.#{$cls-pre}-profile-icon {
+	display: block;
+	border-radius: 50%;
+	border: none;
+	background: $gray-text;
+	width: 34px;
+	height: 34px;
+	overflow: hidden;
 }
 
 .#{$cls-pre}-navbar-main {
