@@ -1,6 +1,6 @@
 .#{$cls-pre}-btn {
 	display: inline-block;
-	padding: 6px 16px;
+	padding: 6px 12px;
 	line-height: 1.43;
 	height: 34px;
 	font-size: $font-size-base;
@@ -67,7 +67,7 @@
 
 .#{$cls-pre}-btn-default {
 	color: $btn-default-color;
-	background: $btn-default-bg;
+	background: #f9f9f9;
 	border-color: $btn-default-border;
 
 	&:hover {
